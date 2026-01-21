@@ -1,0 +1,16 @@
+{
+  "Catástrofe": { "militar": -3, "economica": -3, "social": -3, "magica": -3 },
+  "Turbulência política": { "social": -3, "economica": -1 },
+  "Terror mágico": { "magica": -3, "militar": -1 },
+  "Praga": { "economica": -3, "social": -1 },
+  "Intriga": { "militar": -3, "magica": -1 },
+  "Criaturas míticas": { "magica": 2, "militar": -2 },
+  "Nada muito fora do habitual": { },
+  "Tesouro Natural": { "economica": 3 },
+  "Descoberta": { "social": 3 },
+  "Renascimento religioso": { "magica": 3 },
+  "Boom comercial": { "economica": 2, "militar": 2 },
+  "Heróis": { "militar": 3, "social": 2 },
+  "Avanço no conhecimento": { "magica": 1, "economica": 2 },
+  "Muita fortuna": { "militar": 3, "economica": 3, "social": 3, "magica": 3 }
+}

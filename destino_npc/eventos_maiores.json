@@ -1,0 +1,50 @@
+{
+  "militar": {
+    "positivo": [
+      "HEGEMONIA MILITAR: O reino estabeleceu uma 'Pax Armada'. As estradas são tão seguras que mercadores viajam sem escolta. Uma ordem de cavaleiros de elite foi fundada.",
+      "FORTALEZA INEXPUGNÁVEL: Muralhas foram reforçadas magicamente e o exército está super equipado. O reino se prepara para anexar territórios vizinhos.",
+      "CAÇADORES DE LENDAS: As tropas locais abateram uma ameaça nível Kaiju. O moral é inabalável e recrutas de toda Arton viajam para se alistar aqui."
+    ],
+    "negativo": [
+      "ZONA DE GUERRA: As fronteiras colapsaram. Bandos de puristas ou goblinoides saqueiam vilas livremente. O exército real está em retirada ou desertou.",
+      "LEI MARCIAL FALHA: Mercenários não pagos se voltaram contra os contratantes. A capital está sitiada por seus próprios ex-defensores.",
+      "VULNERABILIDADE TOTAL: Espiões inimigos sabotaram as defesas principais. O reino está aberto para uma invasão iminente da Aliança Negra ou vizinhos gananciosos."
+    ]
+  },
+  "economica": {
+    "positivo": [
+      "ERA DE OURO: A moeda local valorizou 200% frente ao Tibar. Grandes obras arquitetônicas são iniciadas e a pobreza foi virtualmente erradicada.",
+      "GRANDE EMPÓRIO: O reino virou o centro comercial do continente. Itens mágicos raríssimos aparecem nos mercados e dragões observam a riqueza com inveja.",
+      "SUPERÁVIT ABSURDO: Os cofres não fecham de tanto ouro. O regente decide financiar expedições de heróis e patrocinar as artes em escala massiva."
+    ],
+    "negativo": [
+      "BANCARROTA: O tesouro real está vazio. Joias da coroa estão sendo vendidas para comprar trigo. A inflação tornou o dinheiro inútil; volta-se ao escambo.",
+      "FOME E MISÉRIA: Sem dinheiro para importar comida após uma má colheita, a população passa fome. Crimes por sobrevivência explodem.",
+      "DÍVIDA DE SANGUE: O reino pegou empréstimos com o Banco de Tibar ou agiotas de Vectora e não pode pagar. Cobradores (e assassinos) estão batendo à porta."
+    ]
+  },
+  "social": {
+    "positivo": [
+      "UTOPIA: O povo ama o regente incondicionalmente. A criminalidade é zero. Festivais espontâneos ocorrem nas ruas. Estrangeiros são vistos com curiosidade amigável.",
+      "FERVOR NACIONALISTA: A população está unida por um propósito maior (ou uma fé). Eles trabalham o dobro sem reclamar, mas são hostis a críticas externas.",
+      "REFÚGIO DE ESPERANÇA: Refugiados de áreas de Tormenta veem este reino como a terra prometida, trazendo nova mão de obra e cultura vibrante."
+    ],
+    "negativo": [
+      "GUERRA CIVIL: O povo pegou em armas contra a nobreza. Guilhotinas foram montadas nas praças. O regente está escondido ou fugiu.",
+      "ANARQUIA: Não há lei. Cultistas da Tormenta e gangues dominam os bairros. Cidadãos honestos trancam-se em casa e rezam por heróis.",
+      "CISMA RELIGIOSO: Duas igrejas poderosas declararam guerra sagrada dentro das muralhas. O povo está dividido e lutando nas ruas."
+    ]
+  },
+  "magica": {
+    "positivo": [
+      "CONVERGÊNCIA ARCANA: A realidade ficou fina. Magias funcionam com potência dobrada. Ilhas de terra começam a flutuar e animais ganham fala.",
+      "RENASCIMENTO MISTICO: A Academia Arcana instalou uma filial aqui. Crianças nascem com talentos de Feiticeiro espontaneamente. Golens trabalham nas lavouras.",
+      "BENÇÃO DOS DEUSES: Um avatar divino caminhou pela capital. Templos transbordam poder curativo e doenças comuns deixam de existir no reino."
+    ],
+    "negativo": [
+      "VÁCUO DE MANA: A magia morreu. Conjuradores sentem náuseas constantes. Itens mágicos viram tralha comum. Criaturas elementais estão morrendo.",
+      "ROMPIMENTO DA REALIDADE: A alta magia atraiu a Tormenta. Uma Área de Tormenta está se formando no centro de uma floresta ou cidade próxima.",
+      "MALDIÇÃO ANCESTRAL: Um erro mágico liberou uma praga de mortos-vivos ou transformou a água em sangue. A magia existe, mas é hostil e selvagem."
+    ]
+  }
+}

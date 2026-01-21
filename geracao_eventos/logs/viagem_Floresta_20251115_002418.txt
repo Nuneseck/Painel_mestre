@@ -1,0 +1,13 @@
+=== Relatório de Viagem ===
+Terreno: Floresta
+Dias: 8
+Período: dia
+
+Dia 1: Criaturas: Animal - 1d4+1 (rolado 3) lobos das cavernas (Indo para o seu covil) (De manhã)
+Dia 2: Sem eventos
+Dia 3: Criaturas: Animal - 1d6 (rolado 1) Cascavel (Prontas para fugir ao se sentirem ameaçadas) (De manhã)
+Dia 4: Sem eventos
+Dia 5: Obstáculo temporário: Escondidos pela vegetação estão pequenos locais de areia movediça. Para percebe-los é preciso um teste bem sucedido de Percepção (Sabedoria) CD 20, caso não seja percebido, ainda é possível evitar ficar preso com um teste bem-sucedido de Acrobacia (Destreza) CD 15. Caso seja pego pela areia movediça a criatura afunda pouco mais que 50 cm e precisará ser bem-sucedida em um teste de Força CD 18 para se libertar  (De noite)
+Dia 6: Sem eventos
+Dia 7: Sem eventos
+Dia 8: Sem eventos

@@ -1,0 +1,37 @@
+# Theron Greenfield
+
+## Informações Básicas
+- **Raça**:: Humano
+- **Classe**:: Druida 4
+- **Gênero**:: Masculino
+- **Idade**:: 52
+
+## Atributos
+| For | Des | Con | Int | Sab | Car |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| 5 | -2 | 6 | 4 | 1 | 2 |
+
+## Aparência
+- **Traço**:: Ombros curvados: Tem ombros que parecem caídos.
+- **Corpo**:: 169 cm, Gordinho, Pele Pálida
+- **Cabelo**:: Loiro Claro, Ondulado em Espiral, Solto
+
+## Personalidade & Propósito
+- **Traço**:: Comprometido: Dedica-se completamente às suas tarefas e objetivos.
+- **Propósito**:: Riqueza
+- **Conduta**:: Visionário: Pensa no longo prazo e age conforme um grande plano pessoal.
+
+## Tendência
+- **Moral**:: (Bom 1 / Neutro 1 / Mau 8)
+- **Alinhamento**:: (Ordeiro 4 / Neutro 2 / Caótico 4)
+
+## Relações
+- **Orientação**:: Bissexual
+- **Relacionamento**:: Casado
+- **Comunidade**:: Reputação média
+- **Familiares**:: Ninguém restou
+- **Devoção**:: Não Devoto
+
+## Observações
+Guarda 2
+Escolas: Evocação, ilusão e transmutação. 

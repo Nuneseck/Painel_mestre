@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Eventos - Tormenta 20</title>
+    
+    <link rel="stylesheet" href="{{ url_for('encontros.static', filename='style.css') }}">
+    
+    <link rel="stylesheet" href="{{ url_for('eventos.static', filename='css/style.css') }}">
+</head>
+<body>
+    <main>
+    
+        <h1><a href="/" class="header-link">Painel do Mestre</a> / Gerador de Eventos</h1>        
+    
+        <form action="{{ url_for('eventos.generate') }}" method="POST">
+            <fieldset>
+                <legend>Parâmetros da Viagem</legend>
+                <div class="form-group">
+                    <label for="terrain">Tipo de Terreno:</label>
+                    <select name="terrain" id="terrain" required>
+                        {% for key, value in terrains.items() %}
+                            <option value="{{ key }}">{{ value }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="days">Dias de Viagem:</label>
+                    <input type="number" id="days" name="days" min="1" max="30" value="" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Período da Viagem:</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" id="day" name="time" value="day" checked>
+                            Dia
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" id="night" name="time" value="night">
+                            Noite
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            <button type="submit">Gerar Eventos</button>
+        </form>
+    
+    </main>
+    
+</body>
+</html>

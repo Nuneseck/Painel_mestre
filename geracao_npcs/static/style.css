@@ -1,0 +1,220 @@
+/* * Este CSS herda as variáveis (--primary, --bg-dark-surface, etc.)
+ * do 'style.css' principal, que é carregado no npcs.html.
+*/
+
+/* Remove o estilo 'body' daqui, pois ele já é definido pelo CSS principal */
+/* body { ... } */
+
+.container {
+    /* Usa o fundo da superfície do painel */
+    background-color: var(--bg-dark-surface); 
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 30px;
+    max-width: 1500px;
+    width: 100%;
+    
+    /* Garante que o container use o 'main' do painel */
+    margin: 0 auto;
+    border: 2px solid var(--secondary);
+}
+
+.sidebar {
+    width: 500px; /* Largura fixa para o título e botões */
+    text-align: left;
+    flex-shrink: 0; /* Impede que a sidebar encolha */
+}
+
+.sidebar h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: var(--accent); /* Usa a cor de destaque do painel */
+    border-bottom: 1px solid var(--secondary); /* Consistência */
+    padding-bottom: 10px;
+}
+
+/* Link H1 para voltar ao Painel */
+.sidebar h1 a,
+.header-link {
+    text-decoration: none;
+    color: var(--accent);
+    transition: color 0.2s;
+}
+.sidebar h1 a:hover,
+.header-link:hover {
+    color: var(--text-light-primary);
+}
+
+
+.sidebar button {
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: var(--primary); /* Usa a cor primária do painel */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.sidebar button:hover {
+    background-color: var(--accent); /* Usa a cor de destaque */
+}
+
+.main-content {
+    flex: 1; /* Ocupa o espaço restante */
+}
+
+.hidden {
+    display: none;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.section {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid var(--border-dark); /* Usa a borda do painel */
+    border-radius: 5px;
+    background-color: var(--bg-dark-deep); /* Usa o fundo mais escuro */
+    text-align: left;
+    flex: 1;
+}
+
+.section h2 {
+    margin-top: 0;
+    font-size: 1.8em;
+    color: var(--primary); /* Usa a cor primária */
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--secondary);
+}
+
+.section p {
+    margin: 10px 0;
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+.section p strong {
+    color: var(--accent); 
+}
+
+#atributos {
+    list-style-type: none;
+    padding: 0;
+}
+
+#atributos li {
+    margin: 8px 0;
+    font-size: 1.1em;
+    display: flex; /* NOVO: Usa Flexbox para alinhar */
+}
+
+.atributo-nome {
+    color: var(--accent);
+    font-weight: bold;
+    min-width: 140px; /* AUMENTADO: Garante espaço para "Constituição" */
+    display: inline-block;
+    flex-shrink: 0; /* NOVO: Impede que o rótulo encolha */
+}
+
+.atributo-valor {
+    color: var(--text-light-primary); /* Branco */
+    font-weight: bold;
+}
+
+.tendencia-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tendencia-container p {
+    margin: 8px 0;
+    font-size: 1.1em;
+}
+
+.tendencia-container h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--text-light-primary);
+    border-bottom: none;
+    font-size: 1.2em;
+}
+
+.coluna {
+    width: 48%;
+}
+
+.error {
+    color: var(--danger);
+    font-weight: bold;
+}
+
+.sidebar button.secondary-button {
+    background-color: var(--secondary); /* Vermelho mais escuro */
+}
+.sidebar button.secondary-button:hover {
+    background-color: var(--primary); /* Vermelho normal no hover */
+}
+
+/* Estilo para a seção de Observações */
+.observacoes-section {
+    margin-top: 20px;
+}
+.observacoes-section label {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--text-light-secondary);
+}
+.observacoes-section textarea {
+    width: 100%;
+    min-height: 100px;
+    margin-top: 10px;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    background-color: var(--bg-dark-deep);
+    color: var(--text-light-primary);
+    border: 1px solid var(--border-dark);
+    border-radius: 5px;
+    resize: vertical;
+}
+
+.action-status-hidden {
+    display: none;
+}
+.action-status-success {
+    display: block;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #2a3a2a; /* Verde escuro */
+    border: 1px solid #28a745;
+    color: #28a745;
+    font-size: 0.9em;
+    font-weight: bold;
+    border-radius: 4px;
+    text-align: center;
+}
+.action-status-error {
+    display: block;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: var(--dark-crimson);
+    border: 1px solid var(--danger);
+    color: var(--danger);
+    font-size: 0.9em;
+    font-weight: bold;
+    border-radius: 4px;
+    text-align: center;
+}

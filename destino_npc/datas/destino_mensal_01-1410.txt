@@ -1,0 +1,124 @@
+========================================
+=== RELATÓRIO DE DESTINO MENSAL - 01/1410 ===
+========================================
+
+=== DESTINOS DOS REINOS ===
+
+--- CATÁSTROFE ---
+Uivantes
+
+--- TURBULÊNCIA POLÍTICA ---
+Bielefeld
+Fortuna e Petrynia
+Tyrondir e Lamnor
+Sambúrdia e Ghondriann
+
+--- INTRIGA ---
+Sckharshantallas
+
+--- CRIATURAS MÍTICAS ---
+Ahlen e Collen
+Trebuck
+
+--- NADA MUITO FORA DO HABITUAL ---
+Deheon
+Callistia
+Aslothia
+
+--- TESOURO NATURAL ---
+Yuden
+
+--- RENASCIMENTO RELIGIOSO ---
+Tapista
+
+--- BOOM COMERCIAL ---
+Ermos Purpura
+Doherimm
+Khubar
+Wynnla
+Lamnor
+
+--- HERÓIS ---
+Lomatubar e Tollon
+
+--- AVANÇO NO CONHECIMENTO ---
+Pondsmânia
+Sallistick
+
+--- MUITA FORTUNA ---
+Zakharov
+Namalkah
+
+
+========================================
+=== DESTINOS DOS NPCS (POR REINO) ===
+========================================
+
+
+--- REINO: AHLEN E COLLEN (Evento: Criaturas míticas) ---
+
+
+--- REINO: ASLOTHIA (Evento: Nada muito fora do habitual) ---
+
+
+--- REINO: BIELEFELD (Evento: Turbulência política) ---
+
+
+--- REINO: CALLISTIA (Evento: Nada muito fora do habitual) ---
+
+
+--- REINO: DEHEON (Evento: Nada muito fora do habitual) ---
+
+
+--- REINO: DOHERIMM (Evento: Boom comercial) ---
+
+
+--- REINO: ERMOS PURPURA (Evento: Boom comercial) ---
+
+
+--- REINO: FORTUNA E PETRYNIA (Evento: Turbulência política) ---
+
+
+--- REINO: KHUBAR (Evento: Boom comercial) ---
+
+
+--- REINO: LAMNOR (Evento: Boom comercial) ---
+
+
+--- REINO: LOMATUBAR E TOLLON (Evento: Heróis) ---
+
+
+--- REINO: NAMALKAH (Evento: Muita fortuna) ---
+
+
+--- REINO: PONDSMÂNIA (Evento: Avanço no conhecimento) ---
+
+
+--- REINO: SALLISTICK (Evento: Avanço no conhecimento) ---
+
+
+--- REINO: SAMBÚRDIA E GHONDRIANN (Evento: Turbulência política) ---
+
+
+--- REINO: SCKHARSHANTALLAS (Evento: Intriga) ---
+
+
+--- REINO: TAPISTA (Evento: Renascimento religioso) ---
+
+
+--- REINO: TREBUCK (Evento: Criaturas míticas) ---
+
+
+--- REINO: TYRONDIR E LAMNOR (Evento: Turbulência política) ---
+
+
+--- REINO: UIVANTES (Evento: Catástrofe) ---
+
+
+--- REINO: WYNNLA (Evento: Boom comercial) ---
+
+
+--- REINO: YUDEN (Evento: Tesouro Natural) ---
+
+
+--- REINO: ZAKHAROV (Evento: Muita fortuna) ---

@@ -1,0 +1,267 @@
+/* static/style.css */
+body {
+    --primary: #8B0000;      /* Vermelho escuro */
+    --secondary: #5D0000;    /* Vermelho mais escuro */
+    --accent: #D22B2B;       /* Vermelho vivo */
+    --danger: #FF3333;       /* Vermelho de erro */
+    --bg-dark-deep: #121212;     /* Fundo do corpo */
+    --bg-dark-surface: #1e1e1e;  /* Fundo do 'main' */
+    --text-light-primary: #e0e0e0;/* Texto principal */
+    --text-light-secondary: #aaaaaa;/* Texto secundário */
+    --border-dark: #333333;      /* Bordas sutis */
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-dark-deep);
+    color: var(--text-light-primary);
+    margin: 0;
+    padding: 20px;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--bg-dark-surface);
+    color: var(--text-light-primary);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    border: 2px solid var(--secondary);
+}
+
+h1, h2, h3, h4 {
+    color: var(--accent);
+    border-bottom: 1px solid var(--secondary);
+    padding-bottom: 5px;
+}
+
+h1 { text-align: center; }
+h4 { 
+    color: var(--text-light-primary);
+    border-bottom: none;
+    margin-bottom: 10px;
+}
+
+header h1 a,
+.header-link {
+    text-decoration: none;
+    color: var(--accent);
+    transition: color 0.2s;
+}
+header h1 a:hover,
+.header-link:hover {
+    color: var(--text-light-primary, #e0e0e0);
+}
+
+fieldset {
+    border: 1px solid var(--border-dark);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+fieldset.reino-group {
+    border-color: var(--primary);
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 0 10px;
+    color: var(--primary);
+}
+
+.reino-input {
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: var(--bg-dark-deep);
+    border-radius: 4px;
+    border: 1px solid var(--border-dark);
+    transition: opacity 0.3s ease, filter 0.3s ease; /* Adicionado para efeito suave ao desmarcar */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group-inline {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+.form-group-inline .form-group {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-light-secondary);
+}
+
+input[type="text"], /* Adicionei type text para estilizar o path/data */
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--secondary);
+    background-color: var(--bg-dark-deep);
+    color: var(--text-light-primary);
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+button[type="submit"], button[type="button"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--text-light-primary);
+    background-color: var(--primary);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+button[type="submit"]:hover, button[type="button"]:hover {
+    background-color: var(--accent);
+}
+button[type="submit"]:disabled {
+    background-color: #333;
+    color: #777;
+    cursor: not-allowed;
+}
+#btn-copy-report {
+    background-color: var(--secondary);
+    margin-bottom: 15px;
+}
+#btn-copy-report:hover {
+    background-color: var(--primary);
+}
+
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--secondary);
+    background-color: var(--bg-dark-deep);
+    color: var(--text-light-primary);
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    resize: vertical;
+}
+
+.loading {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.1em;
+    color: var(--accent);
+}
+
+.error {
+    color: var(--danger);
+    font-weight: bold;
+}
+
+.success {
+    color: #28a745; /* Verde */
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    background-color: #2a3a2a; /* Fundo verde escuro */
+    border: 1px solid #28a745;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.reino-group legend {
+    font-size: 1.1em;
+}
+
+/* Estilos para a lista de checkboxes de NPCs */
+.npc-checklist {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: var(--bg-dark-deep); /* Se quiser destacar, mude para #181818 */
+    border-radius: 4px;
+}
+.npc-checklist label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px;
+    font-size: 0.9em;
+    color: var(--text-light-secondary);
+    border-bottom: none;
+    margin-bottom: 0;
+}
+.npc-checklist input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary);
+}
+.npc-irrelevante-input {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-dark);
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+/* Botões secundários (Marcar/Desmarcar) */
+button.secondary-button {
+    flex: 1;
+    background-color: var(--secondary);
+    font-size: 0.9em;
+    padding: 8px 12px;
+    width: auto;
+}
+button.secondary-button:hover {
+    background-color: var(--primary);
+}
+
+/* --- NOVAS ADIÇÕES ESPECÍFICAS PARA OS PILARES E HEADER --- */
+
+/* Badge que mostra os status (Espadas, Ouro, etc) */
+.status-badge {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 0.9em;
+    background-color: #222;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid #444;
+    color: #fff;
+    white-space: nowrap; /* Evita que quebre linha */
+}
+
+/* Checkbox de seleção do Reino (O maior ao lado do nome) */
+.reino-select-cb {
+    width: 22px;
+    height: 22px;
+    accent-color: var(--primary);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* Container do Header do Card do Reino */
+.reino-header-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #222;
+}

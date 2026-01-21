@@ -1,0 +1,184 @@
+{
+  "Catastrofe": {
+    "descricao": "Desastre natural, ataque massivo ou evento devastador abala o reino.",
+    "efeito_jogadores": [
+      "Testes de viagem têm +2 de dificuldade.",
+      "Preços de mantimentos aumentam em 20%.",
+      "1 encontro adicional garantido em viagens dentro do reino."
+    ],
+    "efeito_reino": [
+      "Infraestrutura comprometida; estradas e pontes parcialmente inutilizadas.",
+      "Regiões isoladas temporariamente.",
+      "Autoridades sobrecarregadas."
+    ]
+  },
+  "Turbulencia politica": {
+    "descricao": "Conflitos internos, disputas nobres ou manipulações de poder.",
+    "efeito_jogadores": [
+      "Subornos custam 20% menos.",
+      "Missões envolvendo NPCs oficiais têm +1 passo de dificuldade.",
+      "Guardas estão desconfiados: -2 em testes sociais com autoridades."
+    ],
+    "efeito_reino": [
+      "Grupos políticos rivais agem nas sombras.",
+      "Patrulhas inconsistentes.",
+      "Boatos contraditórios espalhados pela população."
+    ]
+  },
+  "Terror magico": {
+    "descricao": "Magias perigosas, aparições, anomalias ou falhas arcanas.",
+    "efeito_jogadores": [
+      "1% de chance diária de um fenômeno mágico aleatório.",
+      "Magias de cura restauram -1 dado (mínimo 1).",
+      "Itens mágicos custam 30% mais."
+    ],
+    "efeito_reino": [
+      "Cultos ou entidades mágicas atuando.",
+      "Mestres arcanos deixam o reino temporariamente.",
+      "Povo em pânico com ilusões e aparições."
+    ]
+  },
+  "Praga": {
+    "descricao": "Doenças, pestes, água contaminada ou fome.",
+    "efeito_jogadores": [
+      "Cada semana dentro do reino exige 1 teste de Fortitude CD moderada.",
+      "Comida custa o dobro.",
+      "Testes de Cura/Medicina realizados pelo grupo recebem +2."
+    ],
+    "efeito_reino": [
+      "Aglomerações desaparecem.",
+      "A cura divina é racionada.",
+      "Cidades isolam viajantes."
+    ]
+  },
+  "Intriga": {
+    "descricao": "Espionagem, chantagens e segredos no submundo.",
+    "efeito_jogadores": [
+      "+2 em testes de Furtividade e Enganação.",
+      "NPCs suspeitam de forasteiros: -1 passo em Persuasão.",
+      "Aparecem missões ilícitas com pagamento 20% maior."
+    ],
+    "efeito_reino": [
+      "Organizações criminosas mais ativas.",
+      "Mensagens interceptadas ou falsificadas.",
+      "Guardas mais corruptos."
+    ]
+  },
+  "Criaturas miticas": {
+    "descricao": "Bestas raras, espíritos ou monstros lendários agem no território.",
+    "efeito_jogadores": [
+      "+1 encontro positivo ou negativo envolvendo criatura rara.",
+      "Peles, itens e partes de monstros valem +30%.",
+      "Sábios e druidas pagam melhor por informações."
+    ],
+    "efeito_reino": [
+      "A natureza manifesta sinais incomuns.",
+      "Santuários despertam.",
+      "Heróis locais desaparecem tentando caçar a ameaça."
+    ]
+  },
+  "Nada fora do habitual": {
+    "descricao": "Um mês estável, sem grandes mudanças.",
+    "efeito_jogadores": [
+      "Preços estáveis.",
+      "Nenhuma modificação em encontros.",
+      "Uma chance pequena de rumor útil (5%)."
+    ],
+    "efeito_reino": [
+      "Rotina normal.",
+      "Nenhuma alteração governamental.",
+      "Povo tranquilo."
+    ]
+  },
+  "Tesouro Natural": {
+    "descricao": "Recursos raros surgem: minerais, plantas, animais valiosos.",
+    "efeito_jogadores": [
+      "Itens de alquimia custam 20% menos.",
+      "Mestres artesãos têm materiais melhores: armas e armaduras +10% mais baratas.",
+      "Encontros de coleta rendem o dobro."
+    ],
+    "efeito_reino": [
+      "Corrida por recursos.",
+      "Exploradores e mineradores chegando.",
+      "Mercadores estrangeiros valorizam o reino."
+    ]
+  },
+  "Descoberta": {
+    "descricao": "Uma expedição revela ruínas, um artefato ou local misterioso.",
+    "efeito_jogadores": [
+      "Guias e mapas custam 30% menos.",
+      "Rumores sobre a descoberta podem gerar 1 gancho de missão.",
+      "Testes de Investigação recebem +1 passo dentro do reino."
+    ],
+    "efeito_reino": [
+      "Arqueólogos e aventureiros chegam.",
+      "Nobres disputam posse da descoberta.",
+      "A região da descoberta atrai atenção global."
+    ]
+  },
+  "Renascimento religioso": {
+    "descricao": "Movimento espiritual forte, peregrinações e prodígios.",
+    "efeito_jogadores": [
+      "Curas divinas custam 20% menos.",
+      "Bênçãos temporárias: 1 teste por dia pode ser rerrolado (uma vez).",
+      "Ordens religiosas se tornam mais acessíveis: favores mais baratos."
+    ],
+    "efeito_reino": [
+      "Aumento de templos.",
+      "Peregrinos chegando.",
+      "Profecias começam a circular."
+    ]
+  },
+  "Boom comercial": {
+    "descricao": "Comércio floresce, caravanas chegam, artesãos prosperam.",
+    "efeito_jogadores": [
+      "Todos os itens não-mágicos custam 10% menos.",
+      "Mais estoque disponível nas lojas.",
+      "+1 item raro disponível no mês."
+    ],
+    "efeito_reino": [
+      "Nova rota comercial.",
+      "Feiras e mercados especiais.",
+      "Guildas expandem influência."
+    ]
+  },
+  "Herois": {
+    "descricao": "Ações heroicas locais inspiram o povo e estabilizam o reino.",
+    "efeito_jogadores": [
+      "Um encontro aleatório negativo pode ser ignorado este mês.",
+      "+2 em testes de Moral, Diplomacia ou Inspiração com cidadãos.",
+      "Recompensas por missão aumentam em 10%."
+    ],
+    "efeito_reino": [
+      "Bandidos recuam.",
+      "Festivais comemoram feitos.",
+      "Monumentos são reconstruídos."
+    ]
+  },
+  "Avanco no conhecimento": {
+    "descricao": "Escolas, academias e inventores produzem inovações úteis.",
+    "efeito_jogadores": [
+      "Poções e pergaminhos custam 15% menos.",
+      "Testes de conhecimento recebem +2.",
+      "Novas ferramentas científicas surgem para venda."
+    ],
+    "efeito_reino": [
+      "Oficinas e universidades ampliam alcance.",
+      "Invenções se espalham.",
+      "Estudiosos estrangeiros visitam."
+    ]
+  },
+  "Muita fortuna": {
+    "descricao": "Riqueza inesperada invade o reino: descobertas, heranças, loterias.",
+    "efeito_jogadores": [
+      "Hospedagens de luxo custam 50% menos.",
+      "Mercadores oferecem itens raros com 20% de desconto.",
+      "1 chance de 20% de receber um presente de um NPC rico."
+    ],
+    "efeito_reino": [
+      "Construções aceleradas.",
+      "Artistas e bardos prosperam.",
+      "Competição comercial intensa."
+    ]
+  }
+}

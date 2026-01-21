@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Destinos (T20)</title>
+    <link rel="stylesheet" href="{{ url_for('destino.static', filename='style.css') }}">
+</head>
+<body>
+
+    <main>
+        <h1><a href="/" class="header-link">Painel do Mestre</a> / Gerador de Destinos</h1>
+        
+        <form id="reino-form">
+            <fieldset>
+                <legend>Configuração</legend>
+                <div class="form-group">
+                    <label for="vault-path">Caminho do Cofre Obsidian:</label>
+                    <input type="text" id="vault-path" value="{{ default_vault_path }}" required>
+                </div>
+                <div class="form-group">
+                    <label for="report-date">Data (ex: 03/1410):</label>
+                    <input type="text" id="report-date" value="01/1410" required>
+                </div>
+            </fieldset>
+            <p>Clique abaixo para rolar o destino dos reinos. O sistema somará o resultado atual com o histórico do reino.</p>
+            <button type="submit" id="btn-gerar-reinos">Escanear Cofre e Calcular Previsão</button>
+        </form>
+        
+        <div id="loading-reinos" class="loading" style="display: none;">Calculando Destinos e Pilares...</div>
+        <div id="scan-error" class="error" style="display: none; text-align: center;"></div>
+
+        <form id="npc-form" style="display: none;">
+            <hr>
+            <h2>Selecione os Reinos</h2>
+            <p>Abaixo estão as previsões. Desmarque para ignorar a mudança.</p>
+
+            <div class="button-group" style="margin-bottom: 20px;">
+                <button type="button" id="btn-check-all-reinos" class="secondary-button">Marcar Todos Reinos</button>
+                <button type="button" id="btn-uncheck-all-reinos" class="secondary-button">Desmarcar Todos Reinos</button>
+            </div>
+
+            <div id="npc-inputs-container"></div>
+            
+            <h3 style="margin-top: 30px;">Controle de NPCs</h3>
+            <div class="button-group">
+                <button type="button" id="btn-check-all-npcs" class="secondary-button">Marcar Todos NPCs</button>
+                <button type="button" id="btn-uncheck-all-npcs" class="secondary-button">Desmarcar Todos NPCs</button>
+            </div>
+            
+            <button type="submit" id="btn-gerar-relatorio">Confirmar Alterações, Salvar no Obsidian e Gerar Relatório</button>
+        </form>
+
+        <div id="loading-npcs" class="loading" style="display: none;">Processando arquivos...</div>
+
+        <div id="final-report-container" style="display: none;">
+            <hr>
+            <h2>Relatório Final</h2>
+            <div id="save-success-message" class="success" style="display: none;"></div>
+            <button type="button" id="btn-copy-report">Copiar Relatório</button>
+            <textarea id="final-report-output" readonly rows="20"></textarea>
+        </div>
+    </main>
+
+    <script>
+        let reinosDataStore = [];
+
+        // --- Helpers de UI ---
+        function toggleReinoCard(checkbox) {
+            const card = checkbox.closest('.reino-input');
+            // Seleciona o cabeçalho onde ficam os status do reino
+            const header = card.querySelector('.reino-header-row'); 
+            
+            if (checkbox.checked) {
+                // Reino Marcado: Tudo normal
+                card.style.opacity = "1";
+                header.style.filter = "none";
+                header.style.opacity = "1";
+            } else {
+                // Reino Desmarcado:
+                // Deixamos APENAS o card levemente transparente, mas NÃO desabilitamos inputs
+                // Assim você ainda pode clicar nos NPCs
+                card.style.opacity = "0.8"; 
+                
+                // Deixamos o cabeçalho (nome do reino e status) cinza para indicar que ELE não vai mudar
+                header.style.filter = "grayscale(100%) opacity(0.5)";
+            }
+        }
+
+        // Listener Global para Checkboxes de Reino
+        document.addEventListener('change', function(e) {
+            if (e.target && e.target.classList.contains('reino-select-cb')) {
+                toggleReinoCard(e.target);
+            }
+        });
+
+        // --- Passo 1: Gerar Previsão ---
+        document.getElementById('reino-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const btn = document.getElementById('btn-gerar-reinos');
+            const loading = document.getElementById('loading-reinos');
+            const npcForm = document.getElementById('npc-form');
+            const inputsContainer = document.getElementById('npc-inputs-container');
+            
+            btn.disabled = true; loading.style.display = 'block';
+            npcForm.style.display = 'none'; inputsContainer.innerHTML = '';
+            reinosDataStore = []; 
+
+            try {
+                const response = await fetch("{{ url_for('destino.gerar_destinos_reinos') }}", {
+                    method: 'POST', headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ vault_path: document.getElementById('vault-path').value })
+                });
+
+                if (!response.ok) throw new Error((await response.json()).error);
+                
+                const agrupados = await response.json(); 
+                let html = '';
+                
+                agrupados.forEach(([evento_nome, data]) => {
+                    html += `<fieldset class="reino-group"><legend>${evento_nome.toUpperCase()}</legend>`;
+                    
+                    data.reinos.forEach(reino => {
+                        reinosDataStore.push(reino);
+                        html += `<div class="reino-input" data-reino="${reino.reino}">`;
+                        
+                        // Header com Checkbox e Status
+                        html += `<div class="reino-header-row">`;
+                        html += `<input type="checkbox" class="reino-select-cb" value="${reino.reino}" checked>`;
+                        html += `<div style="flex-grow: 1;"><div style="display: flex; justify-content: space-between; align-items: center;">`;
+                        html += `<h4 style="margin: 0; border: none;">${reino.reino} <small style="font-weight: normal; font-size: 0.8em;">(Rol: ${reino.evento_num})</small></h4>`;
+                        html += `<span class="status-badge">${reino.status_formatted}</span>`;
+                        html += `</div></div></div>`;
+
+                        if (reino.eventos_maiores && reino.eventos_maiores.length > 0) {
+                            reino.eventos_maiores.forEach(msg => {
+                                html += `<div style="color: #ffd700; background: rgba(255, 215, 0, 0.1); font-size: 0.9em; padding: 5px; border-left: 3px solid #ffd700; margin-bottom: 8px;">${msg}</div>`;
+                            });
+                        }
+                        
+                        // NPCs
+                        if (reino.npcs_found && reino.npcs_found.length > 0) {
+                            html += `<div class="npc-checklist" data-reino-checklist="${reino.reino}">`;
+                            reino.npcs_found.forEach(npc => {
+                                html += `<label><input type="checkbox" name="npc_importante" value="${npc}" checked>${npc.replace('.md', '')}</label>`;
+                            });
+                            html += `</div>`;
+                        } else {
+                            html += `<p style="font-size: 0.8em; color: #777;">Sem NPCs importantes.</p>`;
+                        }
+                        
+                        // Irrelevantes
+                        html += `<div class="form-group npc-irrelevante-input"><label for="irr-${reino.reino}">NPCs Irrelevantes:</label>`;
+                        html += `<input type="number" id="irr-${reino.reino}" min="0" value="0"></div>`;
+                        html += `</div>`; 
+                    });
+                    html += `</fieldset>`;
+                });
+
+                inputsContainer.innerHTML = html;
+                npcForm.style.display = 'block';
+            } catch (error) {
+                document.getElementById('scan-error').textContent = `Erro: ${error.message}`;
+                document.getElementById('scan-error').style.display = 'block';
+            } finally {
+                btn.disabled = false; loading.style.display = 'none';
+            }
+        });
+
+        // --- Passo 2: Salvar ---
+        document.getElementById('npc-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const btn = document.getElementById('btn-gerar-relatorio');
+            const loading = document.getElementById('loading-npcs');
+            
+            // --- CRIAÇÃO DO PAYLOAD ALTERADA ---
+            const payload = reinosDataStore
+                .map(reinoData => {
+                    const card = document.querySelector(`.reino-input[data-reino="${reinoData.reino}"]`);
+                    // Verifica se o checkbox do REINO está marcado
+                    const updatePillars = card && card.querySelector('.reino-select-cb').checked;
+
+                    // Coleta NPCs
+                    const checklist = document.querySelector(`[data-reino-checklist="${reinoData.reino}"]`);
+                    let sel = [];
+                    if (checklist) checklist.querySelectorAll('input:checked').forEach(c => sel.push(c.value));
+                    
+                    const irr = document.getElementById(`irr-${reinoData.reino}`);
+                    const irrValue = irr ? parseInt(irr.value) : 0;
+
+                    return {
+                        ...reinoData,
+                        importantes: sel,
+                        irrelevantes: irrValue,
+                        // NOVA FLAG: Diz ao backend se deve mexer nos pilares ou não
+                        processar_pilares: updatePillars 
+                    };
+                })
+                // FILTRO FINAL: Mantém se tiver Pilares OU NPCs selecionados
+                .filter(item => item.processar_pilares || item.importantes.length > 0 || item.irrelevantes > 0);
+
+            if (payload.length === 0) { alert("Nenhum reino selecionado!"); return; }
+
+            btn.disabled = true; loading.style.display = 'block';
+            
+            try {
+                const response = await fetch("{{ url_for('destino.gerar_relatorio_final') }}", {
+                    method: 'POST', headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ 
+                        reinos_data: payload, 
+                        date: document.getElementById('report-date').value,
+                        vault_path: document.getElementById('vault-path').value
+                    })
+                });
+                
+                if (!response.ok) throw new Error((await response.json()).error);
+                const result = await response.json();
+                
+                document.getElementById('final-report-output').value = result.report;
+                document.getElementById('save-success-message').textContent = `Sucesso! Arquivo: ${result.filepath}`;
+                document.getElementById('save-success-message').style.display = 'block';
+                document.getElementById('final-report-container').style.display = 'block';
+            } catch (error) {
+                alert("Erro: " + error.message);
+            } finally {
+                btn.disabled = false; loading.style.display = 'none';
+            }
+        });
+
+        // Copiar
+        document.getElementById('btn-copy-report').addEventListener('click', function() {
+            navigator.clipboard.writeText(document.getElementById('final-report-output').value);
+            this.textContent = 'Copiado!';
+            setTimeout(() => this.textContent = 'Copiar Relatório', 2000);
+        });
+        
+        // --- BOTOES DE SELEÇÃO EM MASSA ---
+        
+        // REINOS
+        document.getElementById('btn-check-all-reinos').addEventListener('click', () => {
+             document.querySelectorAll('.reino-select-cb').forEach(c => {
+                 c.checked = true;
+                 toggleReinoCard(c);
+             });
+        });
+        document.getElementById('btn-uncheck-all-reinos').addEventListener('click', () => {
+             document.querySelectorAll('.reino-select-cb').forEach(c => {
+                 c.checked = false;
+                 toggleReinoCard(c);
+             });
+        });
+
+        // NPCS
+        document.getElementById('btn-check-all-npcs').addEventListener('click', () => {
+             document.querySelectorAll('[name="npc_importante"]').forEach(c => c.checked = true);
+        });
+        document.getElementById('btn-uncheck-all-npcs').addEventListener('click', () => {
+             document.querySelectorAll('[name="npc_importante"]').forEach(c => c.checked = false);
+        });
+    </script>
+</body>
+</html>

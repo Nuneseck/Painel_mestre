@@ -1,0 +1,13 @@
+=== Relatório de Viagem ===
+Terreno: Floresta
+Dias: 8
+Período: dia
+
+Dia 1: Evento especial: Um Galeb Duhr tenta, sem sucesso, escalar um poço. Sua função era proteger o poço que guarda um item magico. Mesmo se for ajudado ele ataca qualquer um que tente entrar no poço para pegar o item (Role 2 vezes na Tabela de Item Mágico F) (De manhã)
+Dia 2: Sem eventos
+Dia 3: Sem eventos
+Dia 4: Sem eventos
+Dia 5: Sem eventos
+Dia 6: Obstáculo temporário: Uma ponte de madeira antiga range sob o peso. Reflexos CD 13 para cruzar sem cair 3 metros (1d6 (rolado 2) de dano). (Meio-dia)
+Dia 7: Sem eventos
+Dia 8: Sem eventos

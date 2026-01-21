@@ -1,0 +1,13 @@
+=== RELATÓRIO DE DESTINO MENSAL - 03/1410 ===
+
+> **ASLOTHIA**
+Destino: Terror mágico | Status: Militar: -3 | Economica: -1 | Social: -4 | Mágica: 0
+  - Efeito (descrição): Magias perigosas, aparições, anomalias ou falhas arcanas.
+  - Efeitos para jogadores:
+    * 1% de chance diária de um fenômeno mágico aleatório.
+    * Magias de cura restauram -1 dado (mínimo 1).
+    * Itens mágicos custam 30% mais.
+  - Efeitos no reino:
+    * Cultos ou entidades mágicas atuando.
+    * Mestres arcanos deixam o reino temporariamente.
+    * Povo em pânico com ilusões e aparições.

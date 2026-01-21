@@ -1,0 +1,13 @@
+=== Relatório de Viagem ===
+Terreno: Floresta
+Dias: 8
+Período: dia
+
+Dia 1: Sem eventos
+Dia 2: Sem eventos
+Dia 3: Criaturas: Humanoide - 2d6 (rolado 10) cultistas (Se escondendo ou foragidos, Todos da mesma raça) (Anoitecer)
+Dia 4: Sem eventos
+Dia 5: Sem eventos
+Dia 6: Sem eventos
+Dia 7: Sem eventos
+Dia 8: Criaturas: Animal - Exemplo incomum2 (Descansando após a refeição) (Meio-dia)

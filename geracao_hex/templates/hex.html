@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Hex</title>
+    
+    <!-- Carrega o CSS principal para herdar as variáveis de cor -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+    <!-- 
+      CORREÇÃO: 
+      Aponta para o blueprint 'hex' E para a subpasta 'css/style.css'
+    -->
+    <link rel="stylesheet" href="{{ url_for('hex.static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <main>
+            <h1><a href="/" class="header-link">Painel do Mestre</a> / Gerador de Hex</h1>    
+            <div class="form-container"> 
+                <form action="{{ url_for('hex.generate_hex') }}" method="POST">
+                    <fieldset>
+                        <legend>Parâmetros do Hex</legend>
+                        <div class="form-group">
+                            <label for="terreno-select">Selecione o Terreno:</label>
+                            <select id="terreno-select" name="terreno">
+                                {% for value, name in terrains.items() %}
+                                <option value="{{ value }}">{{ name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="btn">Gerar Hexágono</button>
+                </form>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Sistema para Tormenta 20 | Desenvolvido por um maluco.</p>
+        </footer>
+    </div>
+</body>
+</html>

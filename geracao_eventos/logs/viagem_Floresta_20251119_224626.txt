@@ -1,0 +1,15 @@
+=== Relatório de Viagem ===
+Terreno: Floresta
+Dias: 10
+Período: dia
+
+Dia 1: Sem eventos
+Dia 2: Sem eventos
+Dia 3: Sem eventos
+Dia 4: Sem eventos
+Dia 5: Sem eventos
+Dia 6: Sem eventos
+Dia 7: Obstáculo + Criaturas: Pequenos redemoinhos de poeira seguem o grupo por horas. Não fazem nada, mas são visivelmente mágicos. e Animal - Exemplo incomum2 (Famintos e desesperados) (Meio-dia)
+Dia 8: Obstáculo + Criaturas: A vegetação rasteira gruda nas pernas. Movimento reduzido à metade por 1d6 (rolado 3) horas. e Monstro - 1 Carrasco de Lena (Cuidando dos filhotes) (Ao amanhecer)
+Dia 9: Sem eventos
+Dia 10: Criaturas: Monstro - 1d4+1 (rolado 5) Glooop (Doentes ou amaldiçoadas) (Anoitecer)

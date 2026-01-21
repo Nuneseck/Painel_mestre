@@ -1,0 +1,564 @@
+{
+    "Anão": {
+        "faixas_altura": [
+            {"intervalo": [100, 120], "peso": 1},
+            {"intervalo": [120, 130], "peso": 3},
+            {"intervalo": [130, 140], "peso": 4},
+            {"intervalo": [140, 160], "peso": 2}
+        ]
+    },
+    "Dahllan": {
+        "faixas_altura": [
+            {"intervalo": [145, 155], "peso": 2},
+            {"intervalo": [155, 165], "peso": 3},
+            {"intervalo": [165, 180], "peso": 4},
+            {"intervalo": [180, 200], "peso": 1}
+        ]
+    },
+    "Elfo": {
+        "faixas_altura": [
+            {"intervalo": [150, 160], "peso": 1},
+            {"intervalo": [160, 170], "peso": 2},
+            {"intervalo": [170, 180], "peso": 4},
+            {"intervalo": [180, 190], "peso": 2},
+            {"intervalo": [190, 220], "peso": 1}
+        ]
+    },
+    "Eiradaan": {
+        "faixas_altura": [
+            {"intervalo": [150, 160], "peso": 1},
+            {"intervalo": [160, 170], "peso": 2},
+            {"intervalo": [170, 180], "peso": 4},
+            {"intervalo": [180, 190], "peso": 2},
+            {"intervalo": [190, 220], "peso": 1}
+        ]
+    },
+    "Goblin": {
+        "faixas_altura": [
+            {"intervalo": [80, 100], "peso": 1},
+            {"intervalo": [100, 120], "peso": 4},
+            {"intervalo": [120, 130], "peso": 4},
+            {"intervalo": [130, 150], "peso": 1}
+        ]
+    },
+    "Humano": {
+        "faixas_altura": [
+            {"intervalo": [150, 160], "peso": 2},
+            {"intervalo": [160, 170], "peso": 4},
+            {"intervalo": [170, 180], "peso": 3},
+            {"intervalo": [180, 190], "peso": 2},
+            {"intervalo": [190, 220], "peso": 1}
+        ]
+    },
+    "Hynne": {
+        "faixas_altura": [
+            {"intervalo": [80, 100], "peso": 1},
+            {"intervalo": [100, 120], "peso": 4},
+            {"intervalo": [120, 130], "peso": 4},
+            {"intervalo": [130, 150], "peso": 1}
+        ]
+    },
+    "Kliren": {
+        "faixas_altura": [
+            {"intervalo": [140, 160], "peso": 1},
+            {"intervalo": [160, 170], "peso": 2},
+            {"intervalo": [170, 180], "peso": 3},
+            {"intervalo": [180, 190], "peso": 3},
+            {"intervalo": [190, 235], "peso": 1}
+        ]
+    },
+    "Lefou": {
+        "faixas_altura": [
+            {"intervalo": [100, 130], "peso": 1},
+            {"intervalo": [130, 150], "peso": 2},
+            {"intervalo": [150, 170], "peso": 4},
+            {"intervalo": [170, 190], "peso": 2},
+            {"intervalo": [190, 250], "peso": 1}
+        ]
+    },
+    "Duende": {
+        "faixas_altura": [
+            {"intervalo": [30, 60], "peso": 1},
+            {"intervalo": [60, 90], "peso": 1},
+            {"intervalo": [90, 120], "peso": 1},
+            {"intervalo": [120, 150], "peso": 1},
+            {"intervalo": [150, 180], "peso": 1},
+            {"intervalo": [180, 210], "peso": 1},
+            {"intervalo": [210, 240], "peso": 1},
+            {"intervalo": [240, 270], "peso": 1}
+        ]
+    },
+    "Medusa": {
+        "faixas_altura": [
+            {"intervalo": [140, 150], "peso": 1},
+            {"intervalo": [150, 160], "peso": 2},
+            {"intervalo": [160, 170], "peso": 4},
+            {"intervalo": [170, 180], "peso": 2},
+            {"intervalo": [180, 200], "peso": 1}
+        ]
+    },
+    "Minotauro": {
+        "faixas_altura": [
+            {"intervalo": [165, 180], "peso": 1},
+            {"intervalo": [180, 190], "peso": 2},
+            {"intervalo": [190, 200], "peso": 4},
+            {"intervalo": [200, 210], "peso": 2},
+            {"intervalo": [210, 235], "peso": 1}
+        ]
+    },
+    "Osteon": {
+        "faixas_altura": [
+            {"intervalo": [100, 130], "peso": 1},
+            {"intervalo": [130, 150], "peso": 2},
+            {"intervalo": [150, 170], "peso": 4},
+            {"intervalo": [170, 190], "peso": 2},
+            {"intervalo": [190, 250], "peso": 1}
+        ]
+    },
+    "Osteon (Soterrado)": {
+        "faixas_altura": [
+            {"intervalo": [100, 130], "peso": 1},
+            {"intervalo": [130, 150], "peso": 2},
+            {"intervalo": [150, 170], "peso": 4},
+            {"intervalo": [170, 190], "peso": 2},
+            {"intervalo": [190, 250], "peso": 1}
+        ]
+    },
+    "Qareen": {
+        "faixas_altura": [
+            {"intervalo": [140, 150], "peso": 1},
+            {"intervalo": [150, 160], "peso": 2},
+            {"intervalo": [160, 170], "peso": 4},
+            {"intervalo": [170, 180], "peso": 2},
+            {"intervalo": [180, 200], "peso": 1}
+        ]
+    },
+    "Sereia/Tritão": {
+        "faixas_altura": [
+            {"intervalo": [150, 155], "peso": 1},
+            {"intervalo": [155, 160], "peso": 3},
+            {"intervalo": [160, 165], "peso": 4},
+            {"intervalo": [165, 170], "peso": 2}
+        ]
+    },
+    "Sílfide": {
+        "faixas_altura": [
+            {"intervalo": [20, 30], "peso": 1},
+            {"intervalo": [30, 50], "peso": 7},
+            {"intervalo": [50, 60], "peso": 1}
+        ]
+    },
+    "Suraggel (Aggelus)": {
+        "faixas_altura": [
+            {"intervalo": [150, 160], "peso": 2},
+            {"intervalo": [160, 170], "peso": 4},
+            {"intervalo": [170, 180], "peso": 3},
+            {"intervalo": [180, 190], "peso": 2},
+            {"intervalo": [190, 220], "peso": 1}
+        ]
+    },
+    "Suraggel (Sulfure)": {
+        "faixas_altura": [
+            {"intervalo": [150, 160], "peso": 2},
+            {"intervalo": [160, 170], "peso": 4},
+            {"intervalo": [170, 180], "peso": 3},
+            {"intervalo": [180, 190], "peso": 2},
+            {"intervalo": [190, 220], "peso": 1}
+        ]
+    },
+    "Trog": {
+        "faixas_altura": [
+            {"intervalo": [140, 145], "peso": 1},
+            {"intervalo": [145, 150], "peso": 3},
+            {"intervalo": [150, 155], "peso": 4},
+            {"intervalo": [155, 160], "peso": 2},
+            {"intervalo": [160, 180], "peso": 1}
+        ]
+    },
+    "Trog (Anão)": {
+        "faixas_altura": [
+            {"intervalo": [100, 120], "peso": 1},
+            {"intervalo": [120, 125], "peso": 1},
+            {"intervalo": [125, 130], "peso": 3},
+            {"intervalo": [130, 135], "peso": 4},
+            {"intervalo": [135, 140], "peso": 2}
+        ]
+    },
+    "Bugbear": {
+        "faixas_altura": [
+            {"intervalo": [165, 180], "peso": 1},
+            {"intervalo": [180, 190], "peso": 2},
+            {"intervalo": [190, 200], "peso": 4},
+            {"intervalo": [200, 210], "peso": 2},
+            {"intervalo": [210, 235], "peso": 1}
+        ]
+    },
+    "Centauro": {
+        "faixas_altura": [
+            {"intervalo": [200, 210], "peso": 1},
+            {"intervalo": [210, 230], "peso": 2},
+            {"intervalo": [230, 250], "peso": 3},
+            {"intervalo": [250, 270], "peso": 3},
+            {"intervalo": [270, 285], "peso": 2}
+        ]
+    },
+    "Ceratops": {
+        "faixas_altura": [
+            {"intervalo": [200, 210], "peso": 1},
+            {"intervalo": [210, 230], "peso": 2},
+            {"intervalo": [230, 250], "peso": 3},
+            {"intervalo": [250, 270], "peso": 3},
+            {"intervalo": [270, 285], "peso": 2}
+        ]
+    },
+    "Elfo-do-Mar": {
+        "faixas_altura": [
+            {"intervalo": [150, 160], "peso": 2},
+            {"intervalo": [160, 170], "peso": 4},
+            {"intervalo": [170, 180], "peso": 3},
+            {"intervalo": [180, 190], "peso": 2},
+            {"intervalo": [190, 220], "peso": 1}
+        ]
+    },
+    "Meio-elfo": {
+        "faixas_altura": [
+            {"intervalo": [150, 160], "peso": 2},
+            {"intervalo": [160, 170], "peso": 4},
+            {"intervalo": [170, 180], "peso": 3},
+            {"intervalo": [180, 190], "peso": 2},
+            {"intervalo": [190, 220], "peso": 1}
+        ]
+    },
+    "Sátiro": {
+        "faixas_altura": [
+            {"intervalo": [150, 160], "peso": 2},
+            {"intervalo": [160, 170], "peso": 4},
+            {"intervalo": [170, 180], "peso": 3},
+            {"intervalo": [180, 190], "peso": 2},
+            {"intervalo": [190, 220], "peso": 1}
+        ]
+    },
+    "Finntroll": {
+        "faixas_altura": [
+            {"intervalo": [160, 170], "peso": 2},
+            {"intervalo": [170, 180], "peso": 3},
+            {"intervalo": [180, 190], "peso": 4},
+            {"intervalo": [190, 210], "peso": 2},
+            {"intervalo": [210, 230], "peso": 1}
+
+        ]
+    },
+    "Gnoll": {
+        "faixas_altura": [
+            {"intervalo": [140, 150], "peso": 1},
+            {"intervalo": [150, 160], "peso": 2},
+            {"intervalo": [160, 170], "peso": 4},
+            {"intervalo": [170, 180], "peso": 2},
+            {"intervalo": [180, 200], "peso": 1}
+        ]
+    },
+    "Golem": {
+        "faixas_altura": [
+            {"intervalo": [185, 190], "peso": 1},
+            {"intervalo": [190, 200], "peso": 3},
+            {"intervalo": [200, 210], "peso": 4},
+            {"intervalo": [210, 215], "peso": 2}
+        ]
+    },
+    "Harpia": {
+        "faixas_altura": [
+            {"intervalo": [150, 155], "peso": 1},
+            {"intervalo": [155, 160], "peso": 3},
+            {"intervalo": [160, 165], "peso": 4},
+            {"intervalo": [165, 170], "peso": 2}
+        ]
+    },
+    "Hobgoblin": {
+        "faixas_altura": [
+            {"intervalo": [150, 160], "peso": 2},
+            {"intervalo": [160, 170], "peso": 4},
+            {"intervalo": [170, 180], "peso": 3},
+            {"intervalo": [180, 190], "peso": 2},
+            {"intervalo": [190, 220], "peso": 1}
+        ]
+    },
+    "Kaijin": {
+        "faixas_altura": [
+            {"intervalo": [100, 130], "peso": 1},
+            {"intervalo": [130, 150], "peso": 2},
+            {"intervalo": [150, 170], "peso": 4},
+            {"intervalo": [170, 190], "peso": 2},
+            {"intervalo": [190, 250], "peso": 1}
+        ]
+    },
+    "Kallyanach": {
+        "faixas_altura": [
+            {"intervalo": [150, 160], "peso": 2},
+            {"intervalo": [160, 170], "peso": 4},
+            {"intervalo": [170, 180], "peso": 3},
+            {"intervalo": [180, 190], "peso": 2},
+            {"intervalo": [190, 220], "peso": 1}
+        ]
+    },
+    "Kappa": {
+        "faixas_altura": [
+            {"intervalo": [140, 150], "peso": 1},
+            {"intervalo": [150, 160], "peso": 2},
+            {"intervalo": [160, 170], "peso": 4},
+            {"intervalo": [170, 180], "peso": 2},
+            {"intervalo": [180, 200], "peso": 1}
+        ]
+    },
+    "Kobolds": {
+        "faixas_altura": [
+            {"intervalo": [80, 100], "peso": 1},
+            {"intervalo": [100, 120], "peso": 4},
+            {"intervalo": [120, 130], "peso": 4},
+            {"intervalo": [130, 150], "peso": 1}
+        ]
+    },
+    "Meio-Orc": {
+        "faixas_altura": [
+            {"intervalo": [150, 160], "peso": 1},
+            {"intervalo": [160, 170], "peso": 2},
+            {"intervalo": [170, 180], "peso": 4},
+            {"intervalo": [180, 190], "peso": 2},
+            {"intervalo": [190, 220], "peso": 1}
+        ]
+    },
+    "Minauro": {
+        "faixas_altura": [
+            {"intervalo": [150, 160], "peso": 1},
+            {"intervalo": [160, 170], "peso": 2},
+            {"intervalo": [170, 180], "peso": 4},
+            {"intervalo": [180, 190], "peso": 2},
+            {"intervalo": [190, 220], "peso": 1}
+        ]
+    },
+    "Moreau (Herança da Coruja)": {
+        "faixas_altura": [
+            {"intervalo": [150, 160], "peso": 2},
+            {"intervalo": [160, 170], "peso": 4},
+            {"intervalo": [170, 180], "peso": 3},
+            {"intervalo": [180, 190], "peso": 2},
+            {"intervalo": [190, 220], "peso": 1}
+        ]
+    },
+    "Moreau (Herança da Hiena)": {
+        "faixas_altura": [
+            {"intervalo": [150, 160], "peso": 2},
+            {"intervalo": [160, 170], "peso": 4},
+            {"intervalo": [170, 180], "peso": 3},
+            {"intervalo": [180, 190], "peso": 2},
+            {"intervalo": [190, 220], "peso": 1}
+        ]
+    },
+    "Moreau (Herança da Raposa)": {
+        "faixas_altura": [
+            {"intervalo": [140, 150], "peso": 1},
+            {"intervalo": [150, 160], "peso": 2},
+            {"intervalo": [160, 170], "peso": 4},
+            {"intervalo": [170, 180], "peso": 2},
+            {"intervalo": [180, 200], "peso": 1}
+        ]
+    },
+    "Moreau (Herança da Serpente)": {
+        "faixas_altura": [
+            {"intervalo": [140, 150], "peso": 1},
+            {"intervalo": [150, 160], "peso": 2},
+            {"intervalo": [160, 170], "peso": 4},
+            {"intervalo": [170, 180], "peso": 2},
+            {"intervalo": [180, 200], "peso": 1}
+        ]
+    },
+    "Moreau (Herança do Búfalo)": {
+        "faixas_altura": [
+            {"intervalo": [150, 160], "peso": 1},
+            {"intervalo": [160, 170], "peso": 2},
+            {"intervalo": [170, 180], "peso": 4},
+            {"intervalo": [180, 190], "peso": 2},
+            {"intervalo": [190, 220], "peso": 1}
+        ]
+    },
+    "Moreau (Herança do Coelho)": {
+        "faixas_altura": [
+            {"intervalo": [140, 150], "peso": 1},
+            {"intervalo": [150, 160], "peso": 2},
+            {"intervalo": [160, 170], "peso": 4},
+            {"intervalo": [170, 180], "peso": 2},
+            {"intervalo": [180, 200], "peso": 1}
+        ]
+    },
+    "Moreau (Herança do Crocodilo)": {
+        "faixas_altura": [
+            {"intervalo": [150, 160], "peso": 1},
+            {"intervalo": [160, 170], "peso": 2},
+            {"intervalo": [170, 180], "peso": 4},
+            {"intervalo": [180, 190], "peso": 2},
+            {"intervalo": [190, 220], "peso": 1}
+        ]
+    },
+    "Moreau (Herança do Gato)": {
+        "faixas_altura": [
+            {"intervalo": [140, 150], "peso": 1},
+            {"intervalo": [150, 160], "peso": 2},
+            {"intervalo": [160, 170], "peso": 4},
+            {"intervalo": [170, 180], "peso": 2},
+            {"intervalo": [180, 200], "peso": 1}
+        ]
+    },
+    "Moreau (Herança do Leão)": {
+        "faixas_altura": [
+            {"intervalo": [150, 160], "peso": 2},
+            {"intervalo": [160, 170], "peso": 4},
+            {"intervalo": [170, 180], "peso": 3},
+            {"intervalo": [180, 190], "peso": 2},
+            {"intervalo": [190, 220], "peso": 1}
+        ]
+    },
+    "Moreau (Herança do Lobo)": {
+        "faixas_altura": [
+            {"intervalo": [150, 160], "peso": 2},
+            {"intervalo": [160, 170], "peso": 4},
+            {"intervalo": [170, 180], "peso": 3},
+            {"intervalo": [180, 190], "peso": 2},
+            {"intervalo": [190, 220], "peso": 1}
+        ]
+    },
+    "Moreau (Herança do Morcego)": {
+        "faixas_altura": [
+            {"intervalo": [150, 160], "peso": 2},
+            {"intervalo": [160, 170], "peso": 4},
+            {"intervalo": [170, 180], "peso": 3},
+            {"intervalo": [180, 190], "peso": 2},
+            {"intervalo": [190, 220], "peso": 1}
+        ]
+    },
+    "Moreau (Herança do Urso)": {
+        "faixas_altura": [
+            {"intervalo": [150, 160], "peso": 1},
+            {"intervalo": [160, 170], "peso": 2},
+            {"intervalo": [170, 180], "peso": 4},
+            {"intervalo": [180, 190], "peso": 2},
+            {"intervalo": [190, 220], "peso": 1}
+        ]
+    },
+    "Nagah (Macho)": {
+        "faixas_altura": [
+            {"intervalo": [200, 210], "peso": 1},
+            {"intervalo": [210, 230], "peso": 2},
+            {"intervalo": [230, 250], "peso": 3},
+            {"intervalo": [250, 270], "peso": 3},
+            {"intervalo": [270, 285], "peso": 2}
+        ]
+    },
+    "Nagah (Fêmea)": {
+        "faixas_altura": [
+            {"intervalo": [200, 210], "peso": 1},
+            {"intervalo": [210, 230], "peso": 2},
+            {"intervalo": [230, 250], "peso": 3},
+            {"intervalo": [250, 270], "peso": 3},
+            {"intervalo": [270, 285], "peso": 2}
+        ]
+    },
+    "Nezumi": {
+        "faixas_altura": [
+            {"intervalo": [80, 100], "peso": 1},
+            {"intervalo": [100, 120], "peso": 4},
+            {"intervalo": [120, 130], "peso": 4},
+            {"intervalo": [130, 150], "peso": 1}
+        ]
+    },
+    "Ogro": {
+        "faixas_altura": [
+            {"intervalo": [200, 210], "peso": 1},
+            {"intervalo": [210, 230], "peso": 2},
+            {"intervalo": [230, 250], "peso": 3},
+            {"intervalo": [250, 270], "peso": 3},
+            {"intervalo": [270, 285], "peso": 2},
+            {"intervalo": [285, 300], "peso": 1}
+        ]
+    },
+    "Galokk (meio-gigane)": {
+        "faixas_altura": [
+            {"intervalo": [200, 210], "peso": 1},
+            {"intervalo": [210, 230], "peso": 2},
+            {"intervalo": [230, 250], "peso": 3},
+            {"intervalo": [250, 270], "peso": 3},
+            {"intervalo": [270, 285], "peso": 2},
+            {"intervalo": [285, 300], "peso": 1}
+        ]
+    },
+    "Orc": {
+        "faixas_altura": [
+            {"intervalo": [165, 180], "peso": 1},
+            {"intervalo": [180, 190], "peso": 2},
+            {"intervalo": [190, 200], "peso": 4},
+            {"intervalo": [200, 210], "peso": 2},
+            {"intervalo": [210, 235], "peso": 1}
+        ]
+    },
+    "Pteros": {
+        "faixas_altura": [
+            {"intervalo": [140, 150], "peso": 1},
+            {"intervalo": [150, 160], "peso": 2},
+            {"intervalo": [160, 170], "peso": 4},
+            {"intervalo": [170, 180], "peso": 2},
+            {"intervalo": [180, 200], "peso": 1}
+        ]
+    },
+    "Tabrachi": {
+        "faixas_altura": [
+            {"intervalo": [120, 140], "peso": 1},
+            {"intervalo": [140, 150], "peso": 3},
+            {"intervalo": [150, 160], "peso": 3},
+            {"intervalo": [160, 170], "peso": 2},
+            {"intervalo": [170, 180], "peso": 1}
+        ]
+    },
+    "Tengu": {
+        "faixas_altura": [
+            {"intervalo": [140, 150], "peso": 1},
+            {"intervalo": [150, 160], "peso": 2},
+            {"intervalo": [160, 170], "peso": 4},
+            {"intervalo": [170, 180], "peso": 2},
+            {"intervalo": [180, 200], "peso": 1}
+        ]
+    },
+    "Velocis": {
+        "faixas_altura": [
+            {"intervalo": [150, 160], "peso": 2},
+            {"intervalo": [160, 170], "peso": 4},
+            {"intervalo": [170, 180], "peso": 3},
+            {"intervalo": [180, 190], "peso": 2},
+            {"intervalo": [190, 220], "peso": 1}
+        ]
+    },
+    "Voracis": {
+        "faixas_altura": [
+            {"intervalo": [150, 160], "peso": 2},
+            {"intervalo": [160, 170], "peso": 4},
+            {"intervalo": [170, 180], "peso": 3},
+            {"intervalo": [180, 190], "peso": 2},
+            {"intervalo": [190, 220], "peso": 1}
+        ]
+    },
+    "Yidishan": {
+        "faixas_altura": [
+            {"intervalo": [100, 130], "peso": 1},
+            {"intervalo": [130, 150], "peso": 2},
+            {"intervalo": [150, 170], "peso": 4},
+            {"intervalo": [170, 190], "peso": 2},
+            {"intervalo": [190, 250], "peso": 1}
+        ]
+    },
+    "Elfo-do-céu": {
+        "faixas_altura": [
+            {"intervalo": [150, 160], "peso": 1},
+            {"intervalo": [160, 170], "peso": 2},
+            {"intervalo": [170, 180], "peso": 4},
+            {"intervalo": [180, 190], "peso": 2},
+            {"intervalo": [190, 220], "peso": 1}
+        ]
+    }
+}

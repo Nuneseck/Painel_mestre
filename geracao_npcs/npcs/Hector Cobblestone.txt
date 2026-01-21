@@ -1,0 +1,36 @@
+# Hector Cobblestone
+
+## Informações Básicas
+- **Raça**:: Humano
+- **Classe**:: Caçador 14
+- **Gênero**:: Masculino
+- **Idade**:: 17
+
+## Atributos
+| For | Des | Con | Int | Sab | Car |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| 0 | 0 | 1 | 0 | 2 | -1 |
+
+## Aparência
+- **Traço**:: Soft-spoken voice: ['Voz suave', 'Tem uma voz calma e agradável.']
+- **Corpo**:: 170 cm, Mediano, Pele Escura
+- **Cabelo**:: Castanho Claro, Farpado, Rabo de Cavalo
+
+## Personalidade
+- **Positivo**:: Proper: ['Adequado', 'Age de acordo com as normas e convenções.']
+- **Negativo**:: Nasty: ['Desagradável', 'Age de forma rude e ofensiva.']
+- **Aleatório**:: Shameless: ['Desinibido', 'Não se importa com o julgamento dos outros.']
+
+## Relações
+- **Orientação**:: Hétero
+- **Relacionamento**:: Casado
+- **Comunidade**:: Temido
+- **Familiares**:: Pai vivo
+- **Devoção**:: Não Devoto
+
+## Tendência
+- **Moral**:: (Bom 2 / Neutro 5 / Mau 3)
+- **Alinhamento**:: (Ordeiro 1 / Neutro 6 / Caótico 3)
+
+## Observações
+Líder do grupo de aventureiros que foi salvo pelas inimigos do sucesso do cubo anomalia. É um cara carismático 

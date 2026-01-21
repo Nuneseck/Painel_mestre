@@ -1,0 +1,81 @@
+/* Herda as variáveis do /static/style.css principal */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+header h1 a, .header-link {
+    text-decoration: none;
+    color: var(--accent);
+    transition: color 0.2s;
+}
+header h1 a:hover, .header-link:hover {
+    color: var(--text-light-primary, #e0e0e0);
+}
+
+/* USA O TEMA ESCURO DO PAINEL */
+.form-container {
+    background-color: var(--bg-dark-surface);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--secondary, #5D0000);
+}
+.form-group { margin-bottom: 1.5rem; }
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text-light-secondary);
+    font-size: 1.05rem;
+}
+
+select, input[type="number"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid var(--secondary);
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: var(--bg-dark-deep);
+    color: var(--text-light-primary);
+    transition: all 0.3s ease;
+}
+select:focus, input[type="number"]:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(209, 0, 0, 0.2);
+    outline: none;
+}
+.radio-group { display: flex; gap: 1.5rem; margin-top: 0.5rem; }
+.radio-option { display: flex; align-items: center; gap: 0.5rem; color: var(--text-light-primary); }
+
+/* CLASSE DE BOTÃO ÚNICA */
+button, .btn {
+    background: linear-gradient(to bottom, var(--accent), var(--primary));
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+button:hover, .btn:hover {
+    background: linear-gradient(to bottom, var(--tormenta-light, #FF4D4D), var(--accent));
+    transform: translateY(-3px);
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--text-light-secondary);
+    font-size: 0.9rem;
+    padding: 1rem;
+    border-top: 1px dashed var(--secondary);
+}

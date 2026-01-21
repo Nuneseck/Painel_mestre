@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado do Hex</title>
+    
+    <!-- Carrega o CSS principal para herdar as variáveis de cor -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- 
+      CORREÇÃO: 
+      Aponta para o blueprint 'hex' E para a subpasta 'css/results.css'
+    -->
+    <link rel="stylesheet" href="{{ url_for('hex.static', filename='css/results.css') }}">
+</head>
+<body>
+    <div class="container"> 
+        <header>
+            <h1><a href="/" class="header-link">Painel do Mestre</a> / Resultado do Hex</h1>
+        </header>
+
+        <main> <!-- Adicionado <main> para consistência -->
+            <!-- Formulário de Re-rolagem -->
+            <div class="form-container">
+                <form action="{{ url_for('hex.generate_hex') }}" method="POST">
+                    <fieldset>
+                        <legend>Gerar Novo Hex</legend>
+                        <div class="form-group">
+                            <label for="terreno-select">Selecione o Terreno:</label>
+                            <select id="terreno-select" name="terreno">
+                                {% for value, name in terrains.items() %}
+                                <option value="{{ value }}" {% if value == hex.terreno %}selected{% endif %}>{{ name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="btn">Gerar Novamente</button>
+                </form>
+            </div>
+            
+            <hr style="border-color: var(--border-dark); margin: 2rem 0;">
+            <h2>Resultado Gerado (Terreno: {{ terrains.get(hex.terreno, hex.terreno) }})</h2>
+            
+            <div class="results-container">
+                {% if hex.error %}
+                    <p class="error"><b>Erro:</b> {{ hex.error }}</p>
+                {% else %}
+                    <div class="result-item">
+                        <h3>Sensorial</h3>
+                        <p><strong>Paisagem:</strong> {{ hex.paisagem }}</p>
+                        <p><strong>Sons:</strong> {{ hex.sons }}</p>
+                        <p><strong>Odores:</strong> {{ hex.odores }}</p>
+                    </div>
+                    <div class="result-item highlight">
+                        <h3>Conteúdo Principal</h3>
+                        <p><strong>Tipo:</strong> <span class="highlight-text" style="color: var(--accent); font-weight: bold;">{{ hex.conteudo }}</span></p>
+                        <div class="details-box">
+                            <strong>Detalhes:</strong> <br>
+                            <!-- O |safe é necessário para renderizar o <br> e <b> -->
+                            {{ hex.detalhes|safe }}
+                        </div>
+                    </div>
+                {% endif %}
+                
+                <div class="back-link">
+                     <a href="{{ url_for('hex.hex_form') }}">← Voltar</a>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Sistema para Tormenta 20 | Desenvolvido por um maluco.</p>
+        </footer>
+    </div>
+</body>
+</html>

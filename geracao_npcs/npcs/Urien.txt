@@ -1,0 +1,36 @@
+# Urien
+
+## Informações Básicas
+- **Raça**:: Anão
+- **Classe**:: Plebeu 6
+- **Gênero**:: Masculino
+- **Idade**:: 29
+
+## Atributos
+| For | Des | Con | Int | Sab | Car |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| 3 | -1 | 1 | -2 | 3 | -1 |
+
+## Aparência
+- **Traço**:: Graceful dancer's feet: ['Pés graciosos de dançarino', 'Move-se com elegância e leveza.']
+- **Corpo**:: 133 cm, Musculoso, Pele Escura
+- **Cabelo**:: Vermelho Sangue, Farpado, Estilo Punk
+
+## Personalidade
+- **Positivo**:: Self-directed: ['Autodirigido', 'Toma decisões e age por conta própria.']
+- **Negativo**:: Intimidated: ['Intimidado', 'Sente-se amedrontado ou inseguro.']
+- **Aleatório**:: Scornful: ['Desdenhoso', 'Age com desprezo e arrogância.']
+
+## Relações
+- **Orientação**:: Hétero
+- **Relacionamento**:: Namorando
+- **Comunidade**:: Forasteiro
+- **Familiares**:: 2 irmãos
+- **Devoção**:: Não Devoto
+
+## Tendência
+- **Moral**:: (Bom 9 / Neutro 1 / Mau 0)
+- **Alinhamento**:: (Ordeiro 3 / Neutro 4 / Caótico 3)
+
+## Observações
+Nome verdadeiro é Urien. Anão do grupo de aventureiro que foi salvo.

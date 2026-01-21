@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados - Gerador de Eventos</title>
+    
+    <link rel="stylesheet" href="{{ url_for('encontros.static', filename='style.css') }}">
+    
+    <link rel="stylesheet" href="{{ url_for('eventos.static', filename='css/style.css') }}">
+    
+</head>
+<body>
+    <main>
+        <header class="results-header">
+            <h1><a href="/" class="header-link">Painel do Mestre</a> / Resultado dos Eventos</h1>
+            <p>Viagem de {{ days }} dias em: {{ terrain }}</p>
+        </header>
+        
+        <div class="results-container">
+            
+            {% if txt_file %}
+            <div class="download-section">
+                <h3>Relatório Completo</h3>
+                <a href="{{ url_for('eventos.serve_log', filename=txt_file.split('/')[-1]) }}" 
+                   class="download-btn" 
+                   target="_blank"
+                   download>
+                   Baixar Relatório (.txt)
+                </a>
+            </div>
+            {% endif %}
+
+            {% for result in results %}
+                <div class="day-card">
+                    <h3>Dia {{ result.day }}</h3>
+                    
+                    {% if result.encounter %}
+                        <div class="encounter">
+                            <p><strong>Encontro:</strong> {{ result.encounter }}</p>
+                            {% if result.time_of_day %}
+                                <span class="time-badge">{{ result.time_of_day }}</span>
+                            {% endif %}
+                            
+                            {% if result.encounter_data and result.encounter_data.tipo %}
+                            <div class="caracteristicas-section">
+                                <div class="caracteristicas-controls">
+                                    <label for="qtd-{{result.day}}">Quantidade:</label>
+                                    <input type="number" id="qtd-{{result.day}}" 
+                                           min="1" max="5" value="1" 
+                                           class="caracteristicas-input">
+                                    <button type="button" class="btn-caracteristicas" 
+                                            data-tipo="{{ result.encounter_data.tipo }}" 
+                                            data-day="{{ result.day }}">
+                                        Gerar Características
+                                    </button>
+                                </div>
+                                <div id="caracteristicas-{{result.day}}" class="caracteristicas-container"></div>
+                            </div>
+
+                            {% if result.encounter_data.tipo == 'humanoide' %}
+                            <div class="equipamentos-section">
+                                <div class="equipamentos-controls">
+                                    <label for="qtd-armas-{{result.day}}">Armas:</label>
+                                    <input type="number" id="qtd-armas-{{result.day}}" min="0" max="5" value="1" class="equipamentos-input">
+                                    
+                                    <label for="qtd-armaduras-{{result.day}}">Armaduras:</label>
+                                    <input type="number" id="qtd-armaduras-{{result.day}}" min="0" max="5" value="0" class="equipamentos-input">
+                                    
+                                    <button type="button" class="btn-equipamentos" data-day="{{ result.day }}">
+                                        Gerar Equipamentos
+                                    </button>
+                                </div>
+                                <div id="equipamentos-{{result.day}}" class="equipamentos-container"></div>
+                            </div>
+                            {% endif %}
+                            
+                        {% endif %}
+                        </div>
+                    {% else %}
+                        <p class="no-encounter">Nenhum encontro neste dia.</p>
+                    {% endif %}
+                </div>
+            {% endfor %}
+            
+            <div class="back-button-container">
+                <form action="{{ url_for('eventos.generate') }}" method="GET" class="reroll-form">
+                    <button type="submit" class="button-secondary">Rolar Novamente (Mesmos Parâmetros)</button>
+                </form>
+                <a href="{{ url_for('eventos.index') }}" class="button-back">← Mudar Parâmetros</a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        document.querySelectorAll('.btn-caracteristicas').forEach(button => {
+            button.addEventListener('click', async function() {
+                const tipo = this.dataset.tipo;
+                const day = this.dataset.day;
+                const qtd = document.getElementById(`qtd-${day}`).value;
+                const container = document.getElementById(`caracteristicas-${day}`);
+                
+                this.disabled = true;
+                this.textContent = 'Gerando...';
+                container.innerHTML = '<p>Carregando características...</p>';
+                
+                const url = "{{ url_for('eventos.gerar_caracteristicas', tipo='TIPO_PLACEHOLDER') }}".replace('TIPO_PLACEHOLDER', tipo);
+                
+                try {
+                    const response = await fetch(`${url}?qtd=${qtd}`);
+                    const data = await response.json();
+
+                    if (!response.ok || data.error) {
+                        throw new Error(data.error || 'Erro de rede');
+                    }
+                    
+                    let html = '<h4>Características:</h4>';
+                    data.forEach(function(carac) {
+                        html += `
+                        <div class="caracteristica">
+                            <h4>${carac.caracteristica}</h4>
+                            <p>${carac.efeito}</p>
+                        </div>`;
+                    });
+                    container.innerHTML = html;
+                    
+                } catch (error) {
+                    container.innerHTML = `<p class="error"><b>Erro:</b> ${error.message}</p>`;
+                } finally {
+                    this.disabled = false;
+                    this.textContent = 'Gerar Características';
+                }
+            });
+        });
+
+        document.querySelectorAll('.btn-equipamentos').forEach(button => {
+            button.addEventListener('click', async function() {
+                const day = this.dataset.day;
+                const qtdArmas = document.getElementById(`qtd-armas-${day}`).value;
+                const qtdArmaduras = document.getElementById(`qtd-armaduras-${day}`).value;
+                const container = document.getElementById(`equipamentos-${day}`);
+                
+                this.disabled = true;
+                this.textContent = 'Gerando...';
+                container.innerHTML = '<p>Carregando equipamentos...</p>';
+
+                const url = "{{ url_for('eventos.gerar_equipamentos_route') }}";
+                
+                try {
+                    const response = await fetch(`${url}?qtd_armas=${qtdArmas}&qtd_armaduras=${qtdArmaduras}`);
+                    const data = await response.json();
+
+                    if (!response.ok || data.error) {
+                        throw new Error(data.error || 'Erro de rede');
+                    }
+
+                    let html = '';
+                    if (data.armaduras && data.armaduras.length > 0) {
+                        html += '<h4>Armaduras Geradas:</h4>';
+                        data.armaduras.forEach(function(armadura) {
+                            html += `<pre class="equipamento-item">${armadura}</pre>`;
+                        });
+                    }
+                    if (data.armas && data.armas.length > 0) {
+                        html += '<h4>Armas Geradas:</h4>';
+                        data.armas.forEach(function(arma) {
+                            html += `<pre class="equipamento-item">${arma}</pre>`;
+                        });
+                    }
+                    if (html === '') {
+                        html = '<p>Nenhum equipamento foi gerado.</p>';
+                    }
+                    container.innerHTML = html;
+
+                } catch (error) {
+                    container.innerHTML = `<p class="error"><b>Erro:</b> ${error.message}</p>`;
+                } finally {
+                    this.disabled = false;
+                    this.textContent = 'Gerar Equipamentos';
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>

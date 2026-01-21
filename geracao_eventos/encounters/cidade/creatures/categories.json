@@ -1,0 +1,9 @@
+{
+  "Humanoide|humanoide/tipos.json": 12,
+  "Animal|animal/tipos.json": 8,
+  "Monstro|monstro/tipos.json": 6,
+  "Construto|construto/tipos.json": 4,
+  "Morto-vivo|morto-vivo/tipos.json": 3,
+  "Espirito|espirito/tipos.json": 2,
+  "Lefeu|lefeu/tipos.json": 1
+}

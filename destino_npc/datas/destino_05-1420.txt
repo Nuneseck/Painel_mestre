@@ -1,0 +1,169 @@
+=== RELATÓRIO DE DESTINO MENSAL - 05/1420 ===
+
+> **AHLEN E COLLEN**
+Destino: Intriga | Status: Militar: -5 | Economica: 0 | Social: -2 | Mágica: -3
+   - NPCs Importantes:
+     * Damelios: Marcado como vilão e caçado no Reinado inteiro
+     * Espada 4: Se alia a outro NPC no reino
+     * Jaafan: Tem sua reputação manchada e é alvo de boatos e difamação, recebendo -4 em perícias originalmente relacionadas a carisma por toda Ramnor
+     * Mist: Escorraçado para um reino qualquer (Aslothia)
+
+> **ASLOTHIA**
+Destino: Avanço no conhecimento | Status: Militar: -3 | Economica: 1 | Social: -4 | Mágica: 1
+   - NPCs Importantes:
+     * Cresano: Descobre fórmula de item alquímico ou mágico
+     * Ester: Recebe a habilidade anti-criatura permanente.
+     * Noburu: Aumenta 1 atributo mental em +1 (máximo 1 vez por NPC)
+     * O escolhido: Recebe um poder à escolha.
+     * Serana Beedo: Aprende uma nova magia (se conjurador) ou técnica
+
+> **BIELEFELD**
+Destino: Avanço no conhecimento | Status: Militar: 0 | Economica: 2 | Social: 0 | Mágica: 1
+   - NPCs Importantes:
+     * Anderson: Aprende um novo idioma ou proficiência simples
+     * Dante: Se alia a outro NPC no reino (grupo de estudos)
+     * Dinah: Aumenta 1 atributo mental em +1 (máximo 1 vez por NPC)
+     * Jinho (Nimb): Descobre fórmula de item alquímico ou mágico
+     * Merek: Aprende uma nova magia (se conjurador) ou técnica
+     * Sir Alenn Toren: Pesquisador: vai para um reino afetado (Callistia)
+
+> **CALLISTIA**
+Destino: Terror mágico | Status: Militar: -2 | Economica: 0 | Social: -2 | Mágica: -3
+   - NPCs Importantes:
+     * Anônimo: Amaldiçoado levemente (aparência alterada ou aura ruim)
+     * Dork: Perde 5 PMs para cada 5 níveis por 2d4 (rolado 3) semanas
+     * Tanjiro Mamado: Marcado por Legião Arcana (recebe -5 contra magias de uma escola)
+
+> **DEHEON**
+Destino: Terror mágico | Status: Militar: -1 | Economica: 0 | Social: 0 | Mágica: -3
+   - NPCs Importantes:
+     * Elmnir: Sofre -2 de Resistência contra magia por 2d4 (rolado 4) semanas
+     * Lucerys Valtheon: Assinatura mágica exposta (+5 em testes para rastreá-lo)
+     * Nero Kardamar: Se alia a outro NPC no reino
+     * Noctus Vane: Cagão: o medo lhe faz ir para o vizinho mais próximo (Zakharov)
+
+> **DOHERIMM**
+Destino: Descoberta | Status: Militar: 0 | Economica: 0 | Social: 3 | Mágica: 0
+
+> **ERMOS PURPURA**
+Destino: Muita fortuna | Status: Militar: 3 | Economica: 3 | Social: 3 | Mágica: 3
+   - NPCs Importantes:
+     * Alphonse: Ressurreição Verdadeira (sem custos)
+     * Connor: Auxilio divino: automaticamente se encontra com os PJ
+     * Lithuar Ardel: Se alia a outros dois NPC no reino (formam uma tríade)
+     * Rengoku: Auxilio divino: automaticamente se encontra com os PJ
+     * Soll Lierbe Venus II: Acha um item mágico lendário (artefato menor)
+
+> **FORTUNA E PETRYNIA**
+Destino: Turbulência política | Status: Militar: 0 | Economica: -1 | Social: -3 | Mágica: 0
+   - NPCs Importantes:
+     * Gemini Wyrus: Forçado a servir como espião para facção rival
+     * Nikola Tesla: Perde um item valioso
+     * Professor Manfyndoriel: Aliado próximo é preso ou exilado
+     * Roque Diadema: Pária: vai para um vizinho aleatório (Tapista)
+
+> **KHUBAR**
+Destino: Catástrofe | Status: Militar: -3 | Economica: -3 | Social: -3 | Mágica: -3
+
+> **LOMATUBAR E TOLLON**
+Destino: Renascimento religioso | Status: Militar: 0 | Economica: 0 | Social: 0 | Mágica: 3
+   - NPCs Importantes:
+     * Mandioca: Recupera-se de um ferimento permanente
+     * Prosperine: Inimigo de Clérigos (sofre +5 de dano de magias divinas)
+     * Trevor 4 Folhas: Recupera-se de um ferimento permanente
+
+> **NAMALKAH**
+Destino: Renascimento religioso | Status: Militar: 0 | Economica: 0 | Social: 0 | Mágica: 3
+   - NPCs Importantes:
+     * Adão: Fica permanentemente sob efeito de uma magia divina aleatória. 2PMs(personagem nível 1-5), 4PMs(6-10), 6PMs(11-16) ou 9PMs(17-20)
+     * Dee: Peregrino: vai para vizinho aleatório (Callistia)
+     * Dominique: Recupera-se de um ferimento permanente
+     * Gustavo: Recupera-se de um ferimento permanente
+     * Henrik: Adquire um item esotérico
+     * Hugo: Rola 1d4 (rolado 3) e em 4 um aliado é revivido ou revive
+     * Wined: Se alia a outro NPC no reino
+
+> **PONDSMÂNIA**
+Destino: Descoberta | Status: Militar: 0 | Economica: 0 | Social: 1 | Mágica: 2
+   - NPCs Importantes:
+     * Arthur Stone: Aumenta 2 PM permanente
+     * Sir Picles: Recebe um poder aleatório por 1d6 (rolado 1) meses
+
+> **SALLISTICK**
+Destino: Intriga | Status: Militar: -3 | Economica: 0 | Social: 0 | Mágica: -1
+   - NPCs Importantes:
+     * Barily Bariga: Marcado como vilão e caçado no Reinado inteiro
+     * Dionísio Cesário: Marcado como vilão e caçado no Reinado inteiro
+     * Setob Naosmok: Escorraçado para um reino qualquer (Khubar)
+     * T20 (Teste de modelo n°20): Se alia a outro NPC no reino
+     * Taric: Marcado como traidor e procurado no reino apenas
+     * Tatsu: Sofre um ferimento permanente - Tabela
+
+> **SAMBÚRDIA E GHONDRIANN**
+Destino: Avanço no conhecimento | Status: Militar: 0 | Economica: 2 | Social: 0 | Mágica: 1
+   - NPCs Importantes:
+     * Aladim: Aumenta 1 atributo mental em +1 (máximo 1 vez por NPC)
+     * Drucausk Ajaik: Aprende um novo idioma ou proficiência simples
+     * John: Aprende uma nova magia (se conjurador) ou técnica
+     * Natsume: Descobre fórmula de item alquímico ou mágico
+     * Rei Rocha: Aprende uma nova magia (se conjurador) ou técnica
+
+> **SCKHARSHANTALLAS**
+Destino: Terror mágico | Status: Militar: -1 | Economica: 0 | Social: 0 | Mágica: -3
+   - NPCs Importantes:
+     * Gabiru: Amaldiçoado levemente (aparência alterada ou aura ruim)
+
+> **TAPISTA**
+Destino: Catástrofe | Status: Militar: -3 | Economica: -3 | Social: -3 | Mágica: -3
+   - NPCs Importantes:
+     * Iron Tarkus: Perde 1d4 (rolado 4) níveis
+
+> **TREBUCK**
+Destino: Avanço no conhecimento | Status: Militar: 0 | Economica: 2 | Social: 0 | Mágica: 1
+   - NPCs Importantes:
+     * Faziller: Fica permanentemente sob efeito de uma magia arcana benéfica aleatória. 2PMs(personagem nível 1-5), 4PMs(6-10), 6PMs(11-16) ou 9PMs(17-20)
+     * Gon: Aprende +2 magias ou ganha +5PMs.
+     * Grafite: Aprende +2 magias ou ganha +5PMs.
+     * Issei Ryzz: Aprende um novo idioma ou proficiência simples
+     * Ivegan Scrap: Fica permanentemente sob efeito de uma magia arcana benéfica aleatória. 2PMs(personagem nível 1-5), 4PMs(6-10), 6PMs(11-16) ou 9PMs(17-20)
+     * Killua: Recebe um poder à escolha.
+     * Kiryl Kischuk Krollyath (KKK): Recebe a habilidade anti-criatura permanente.
+     * Nog: Se alia a outro NPC no reino (grupo de estudos)
+     * Syken Hurin: Aprende um novo idioma ou proficiência simples
+     * Zebediah: Descobre fórmula de item alquímico ou mágico
+
+> **TYRONDIR E LAMNOR**
+Destino: Catástrofe | Status: Militar: -5 | Economica: -3 | Social: -5 | Mágica: -5
+   - NPCs Importantes:
+     * Ronaldo: Se alia a outro NPC no reino para sobreviver
+     * Souka Ewani: Item principal ganha maldição permanente
+     * Thuli Scahafleo: Fujão: vai para o vizinho em pior condição (Wynlla)
+
+> **UIVANTES**
+Destino: Muita fortuna | Status: Militar: 3 | Economica: 3 | Social: 3 | Mágica: 3
+   - NPCs Importantes:
+     * Kayan Wester: Consegue um item com três encantos
+     * Maito: Sobe 2 níveis
+
+> **WYNLLA**
+Destino: Catástrofe | Status: Militar: -3 | Economica: -3 | Social: -3 | Mágica: -3
+   - NPCs Importantes:
+     * Elias: Perde todos os bens
+
+> **YUDEN**
+Destino: Heróis | Status: Militar: 3 | Economica: 0 | Social: 2 | Mágica: 0
+   - NPCs Importantes:
+     * Dankan: Profeta: vai para o reino onde os PJ estão atualmente
+     * Heitor: Recebe permanentemente +2 em uma perícia aleatória
+     * Krampus: Profeta: vai para o reino onde os PJ estão atualmente
+     * Lothar Algherulff: Profeta: vai para o reino onde os PJ estão atualmente
+     * Trall: Celebridade: convocado para a capital ou corte
+     * Yuno: Recebe permanentemente +2 em uma perícia aleatória
+
+> **ZAKHAROV**
+Destino: Praga | Status: Militar: 0 | Economica: -3 | Social: -1 | Mágica: 0
+   - NPCs Importantes:
+     * Cronos Novacrono: Sangue Amaldiçoado (recupera metade dos PVs com descanso)
+     * Desdemona Loriene: Se alia a outro NPC no reino
+     * Hadrian Flubro: Reduz permanentemente 1 atributo aleatório em 1d4-1 (rolado 3)
+     * Maito Guy: Sofre uma deformidade física permanente

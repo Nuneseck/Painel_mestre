@@ -1,0 +1,134 @@
+{
+    "Tyrondir e Lamnor": {
+        "economica": -3,
+        "magica": -5,
+        "militar": -5,
+        "social": -5
+    },
+    "Callistia": {
+        "economica": 0,
+        "magica": -3,
+        "militar": -2,
+        "social": -2
+    },
+    "Ahlen e Collen": {
+        "economica": 0,
+        "magica": -1,
+        "militar": -3,
+        "social": 0
+    },
+    "Pondsmânia": {
+        "economica": 0,
+        "magica": 2,
+        "militar": 0,
+        "social": 1
+    },
+    "Aslothia": {
+        "economica": 1,
+        "magica": 1,
+        "militar": -3,
+        "social": -4
+    },
+    "Khubar": {
+        "economica": -3,
+        "magica": -3,
+        "militar": -3,
+        "social": -3
+    },
+    "Wynlla": {
+        "economica": -3,
+        "magica": -3,
+        "militar": -3,
+        "social": -3
+    },
+    "Tapista": {
+        "economica": -3,
+        "magica": -3,
+        "militar": -3,
+        "social": -3
+    },
+    "Fortuna e Petrynia": {
+        "economica": -1,
+        "magica": 0,
+        "militar": 0,
+        "social": -3
+    },
+    "Zakharov": {
+        "economica": -3,
+        "magica": 0,
+        "militar": 0,
+        "social": -1
+    },
+    "Deheon": {
+        "economica": 0,
+        "magica": -3,
+        "militar": -1,
+        "social": 0
+    },
+    "Sckharshantallas": {
+        "economica": 0,
+        "magica": -3,
+        "militar": -1,
+        "social": 0
+    },
+    "Sallistick": {
+        "economica": 0,
+        "magica": -1,
+        "militar": -3,
+        "social": 0
+    },
+    "Doherimm": {
+        "economica": 0,
+        "magica": 0,
+        "militar": 0,
+        "social": 3
+    },
+    "Namalkah": {
+        "economica": 0,
+        "magica": 3,
+        "militar": 0,
+        "social": 0
+    },
+    "Lomatubar e Tollon": {
+        "economica": 0,
+        "magica": 3,
+        "militar": 0,
+        "social": 0
+    },
+    "Yuden": {
+        "economica": 0,
+        "magica": 0,
+        "militar": 3,
+        "social": 2
+    },
+    "Bielefeld": {
+        "economica": 2,
+        "magica": 1,
+        "militar": 0,
+        "social": 0
+    },
+    "Trebuck": {
+        "economica": 2,
+        "magica": 1,
+        "militar": 0,
+        "social": 0
+    },
+    "Sambúrdia e Ghondriann": {
+        "economica": 2,
+        "magica": 1,
+        "militar": 0,
+        "social": 0
+    },
+    "Ermos Purpura": {
+        "economica": 3,
+        "magica": 3,
+        "militar": 3,
+        "social": 3
+    },
+    "Uivantes": {
+        "economica": 3,
+        "magica": 3,
+        "militar": 3,
+        "social": 3
+    }
+}

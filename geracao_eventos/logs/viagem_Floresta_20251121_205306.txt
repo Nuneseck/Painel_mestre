@@ -1,0 +1,15 @@
+=== Relatório de Viagem ===
+Terreno: Floresta
+Dias: 10
+Período: dia
+
+Dia 1: Sem eventos
+Dia 2: Sem eventos
+Dia 3: Criaturas: Construto - Exemplo comum (Exemplo de tipo de construto) (Ao amanhecer)
+Dia 4: Sem eventos
+Dia 5: Obstáculo + Criaturas: O grupo cruza uma ponte natural de cipós instáveis. Teste de Acrobacia CD 17 ou cairá 3 metros. e Monstro - 1d4 (rolado 2) Warg (Prontas para fugir ao se sentirem ameaçadas) (De manhã)
+Dia 6: Criaturas: Monstro - 1d4 (rolado 4) Mercenário de Aslothia (Indo para o seu covil) (Anoitecer)
+Dia 7: Sem eventos
+Dia 8: Sem eventos
+Dia 9: Sem eventos
+Dia 10: Sem eventos

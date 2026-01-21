@@ -1,0 +1,36 @@
+# Sibylla Ironhand
+
+## Informações Básicas
+- **Raça**:: Golem
+- **Classe**:: Cavaleiro 6
+- **Gênero**:: Feminino
+- **Idade**:: 89
+
+## Atributos
+| For | Des | Con | Int | Sab | Car |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| 4 | -2 | 4 | 2 | 4 | -2 |
+
+## Aparência
+- **Traço**:: Costas fortes e resistentes: Tem um físico robusto e durável.
+- **Corpo**:: 204 cm, Muito magro, Pele de Cristal
+- **Cabelo**:: Loiro Claro, Levemente Cacheado, Preso em Coques Duplos, Cabelos Feitos de Fibra Arcana
+
+## Personalidade & Propósito
+- **Traço**:: Sexual: Tem um foco excessivo em questões sexuais.
+- **Propósito**:: Amor
+- **Conduta**:: Conservador: Evita mudanças e prefere estratégias tradicionais.
+
+## Tendência
+- **Moral**:: (Bom 5 / Neutro 0 / Mau 5)
+- **Alinhamento**:: (Ordeiro 9 / Neutro 0 / Caótico 1)
+
+## Relações
+- **Orientação**:: Hétero
+- **Relacionamento**:: Em um caso
+- **Comunidade**:: Reputação ótima
+- **Familiares**:: 3 filhos
+- **Devoção**:: Não Devoto
+
+## Observações
+Guarda 1

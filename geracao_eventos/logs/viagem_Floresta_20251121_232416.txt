@@ -1,0 +1,10 @@
+=== Relatório de Viagem ===
+Terreno: Floresta
+Dias: 5
+Período: noite
+
+Dia 1: Anomalia: O vento faz barulhos estranhos entre as árvores (De manhã)
+Dia 2: Anomalia: Algo brilha à distância, mas é apenas um reflexo (De noite)
+Dia 3: Sem eventos
+Dia 4: Alarme falso: Várias pegadas humanas ao redor de uma árvore grande — mas elas são idênticas e circulares, como se algo estivesse girando no lugar. (Anoitecer)
+Dia 5: Obstáculo + Criaturas: Poças de água ácida exigem atenção constante. Teste de Reflexos CD 14 a cada 30 minutos ou sofre 1d6 (rolado 6) de dano ácido. e Humanoide - Exemplo lendario (Presos em uma anomalia, Maioria da mesma raça, os outros são os líderes) (Enquanto se preparam para um descanso longo)

@@ -1,0 +1,228 @@
+[
+  {
+    "number": "1",
+    "name": "Catástrofe",
+    "options": [
+      "Morte",
+      "Perde todos os bens",
+      "Perde 1d4 níveis",
+      "Perde 1 nível",
+      "Perde conexão com divindade (devotos perdem 1 poder concedido)",
+      "Sofre mutação aleatória (rolar Tabela de Corrupção de Tormenta)",
+      "Item principal ganha maldição permanente",
+      "Perde 1 habilidade racial ou poder",
+      "Perde 1d4-1 de 1d4 atributos",
+      "Se alia a outro NPC no reino para sobreviver",
+      "Fujão: vai para o reino vizinho em pior condição",
+      "Fujão: vai para o reino vizinho em pior condição"
+    ]
+  },
+  {
+    "number": "2",
+    "name": "Turbulência política",
+    "options": [
+      "Aliado próximo é preso ou exilado",
+      "É temporariamente exilado (1d6 meses)",
+      "Perde a confiança das pessoas (-2 em Carisma no reino)",
+      "Perde metade dos tibares (confisco ou suborno)",
+      "Perde um item valioso",
+      "É alvo de represálias (-2 na Defesa e resistências contra facção rival)",
+      "Torna-se alvo de Caçador de Recompensas (ND = nível do NPC)",
+      "Perde título ou fama (-2 em Diplomacia permanente)",
+      "Forçado a servir como espião para facção rival",
+      "Se alia a outro NPC no reino",
+      "Pária: vai para um reino vizinho aleatório",
+      "Pária: vai para um reino vizinho aleatório"
+    ]
+  },
+  {
+    "number": "3",
+    "name": "Terror mágico",
+    "options": [
+      "Não pode usar habilidades de classe por 1d6+1 semanas",
+      "Perde 5 PMs para cada 5 níveis por 2d4 semanas",
+      "Perde o acesso a uma escola de magia específica ou uma habilidade de classe por 1d4 meses",
+      "Amaldiçoado levemente (aparência alterada ou aura ruim)",
+      "Amaldiçoado - Role tabela de maldições (Chance menor)",
+      "Sofre -2 de Resistência contra magia por 2d4 semanas",
+      "Marcado por Legião Arcana (recebe -5 contra magias de uma escola)",
+      "Troque um atributo físico por um mental aleatório",
+      "Assinatura mágica exposta (+5 em testes para rastreá-lo)",
+      "Se alia a outro NPC no reino",
+      "Cagão: o medo lhe faz ir para o reino mais próximo",
+      "Cagão: o medo lhe faz ir para o reino mais próximo"
+    ]
+  },
+  {
+    "number": "4",
+    "name": "Praga",
+    "options": [
+      "Tem sua energia vital afetada e perde 10 pontos de Vida máxima para cada 5 níveis",
+      "Reduz permanentemente 1 atributo aleatório em 1d4-1",
+      "Sofre -2 em todas as resistências por 1d6 semanas",
+      "Perde 10 pontos de uma resistência que possua. Se possuir imunidade essa se torna 50 apenas",
+      "Contrai uma doença – Role tabela de doenças",
+      "Sofre uma deformidade física permanente",
+      "Infestação de Parasitas de Wynna (-2 em Constituição por 1 mês)",
+      "Sangue Amaldiçoado (recupera metade dos PVs com descanso)",
+      "Sangue Amaldiçoado (recupera metade dos PVs com descanso)",
+      "Se alia a outro NPC no reino",
+      "Sobrevivente: em tempos difíceis se mover é ideal - vá para um reino de seu interesse",
+      "Sobrevivente: em tempos difíceis se mover é ideal - vá para um reino de seu interesse"
+    ]
+  },
+  {
+    "number": "5",
+    "name": "Intriga",
+    "options": [
+      "Marcado como vilão e caçado no Reinado inteiro",
+      "Marcado como traidor e procurado no reino apenas",
+      "É alvo de conspiração que lhe ameaça. Role 1d20 e em caso de 1 morre",
+      "Sofre um ferimento permanente - Tabela",
+      "É alvo de chantagem e extorsão por parte de um grupo influente, sendo obrigado a pagar uma quantia significativa de dinheiro regularmente para evitar retaliação: perde 25% de seus bens",
+      "Tem sua reputação manchada e é alvo de boatos e difamação, recebendo -4 em perícias originalmente relacionadas a carisma por toda Ramnor",
+      "Se alia a outro NPC no reino",
+      "Escorraçado para um reino qualquer",
+      "Escorraçado para um reino qualquer"
+    ]
+  },
+  {
+    "number": "6",
+    "name": "Criaturas míticas",
+    "options": [
+      "Sofre uma transformação involuntária causada por uma criatura, perdendo uma de suas habilidades raciais",
+      "Fobia: fica abalado na presença do tipo de criatura",
+      "É enfeitiçado por uma criatura mítica e passa a agir contra seus próprios interesses ou dos aliados (Muda de tendência), sendo controlado pelo próximo mês",
+      "Contrai uma doença mágica rara causada por uma criatura mítica, envelhecendo 2d6 anos",
+      "Tem sua mente afetada por uma criatura, experimentando visões e pesadelos perturbadores que afetam sua sanidade mental – fica fatigado por 1d6 semanas",
+      "Tem seus bens e propriedades destruídos por uma criatura durante um ataque, perdendo metade de seus itens",
+      "Sobrevivente de Tormenta (+5 em testes contra criaturas da Tormenta)",
+      "Se alia a outro NPC no reino",
+      "Mandado para o reino mais próspero em volta",
+      "Mandado para o reino mais próspero em volta"
+    ]
+  },
+  {
+    "number": "7",
+    "name": "Tesouro Natural",
+    "options": [
+      "Recebe 4d10 tibares de platina",
+      "1 equipamentos adquire matéria-prima ou um aprimoramento",
+      "Alquímicos ou similares recebem +2CD ou +1 dado adicional",
+      "Ganha 8d8 tibares de platina",
+      "Role tabela de tesouros padrão ND igual ao seu nível-4",
+      "Encontra Veio de Essência (+1PM permanente por 5 níveis)",
+      "Acesso exclusivo a Matéria-Prima (arma ganha +1 passo de dano)",
+      "Se alia a outro NPC no reino",
+       "Recebe 1d6 poções de vida 3PMS (nível 1-5), 6PMs (6-10), 10PMs (11-16) ou 15Pms (17-20 ou essências de mana (melhoradas de acordo com nível também)"
+    ]
+  },
+  {
+    "number": "8",
+    "name": "Descoberta",
+    "options": [
+      "Adquire acesso a um local secreto ou oculto",
+      "Recebe um bônus de +2 em alguma perícia por 1d6 meses",
+      "Aprende um novo idioma ou proficiência simples",
+      "Recebe um poder aleatório por 1d6 meses",
+      "Recebe +1 em um atributo aleatório",
+      "Remove uma condição negativa persistente",
+      "Remove uma condição negativa persistente",
+      "Aumenta 2 PM permanente",
+      "Aumenta em 1d4-1 um dos atributos por 2d4 semanas",
+      "Se alia a outro NPC no reino",
+      "Explorador: vai para um reino vizinho qualquer"
+    ]
+  },
+  {
+    "number": "9",
+    "name": "Renascimento religioso",
+    "options": [
+      "Adquire devoção ou um poder concedido",
+      "Fica permanentemente sob efeito de uma magia divina aleatória. 2PMs(personagem nível 1-5), 4PMs(6-10), 6PMs(11-16) ou 9PMs(17-20)",
+      "Diminui 1 atributo em 1d6 por 2d4 semanas, amaldiçoado por um deus",
+      "Rola 1d4 e em 4 um aliado é revivido ou revive",
+      "Milagre menor: cura todas as doenças e venenos atuais",
+      "Recupera-se de um ferimento permanente",
+       "Recupera-se de um ferimento permanente",
+      "Adquire um item esotérico",
+      "Inimigo de Clérigos (sofre +5 de dano de magias divinas)",
+      "Se alia a outro NPC no reino",
+      "Peregrino: vai para reino vizinho aleatório",
+      "Peregrino: vai para reino vizinho aleatório"
+    ]
+  },
+  {
+    "number": "10",
+    "name": "Boom comercial",
+    "options": [
+      "Consegue o bônus da uma tabela de tesouros ND = nível + 5.",
+      "Ganha dois itens superiores com 1 modificação",
+      "Ganha dois itens superiores com 1 modificação",
+      "Um item recebe 'Banho de Prata' ou 'Aço-Rubi' (se aplicável)",
+      "Consegue um item superior com 2 modificações (ou de valor equivalente)",
+      "Consegue um item superior com 2 modificações (ou de valor equivalente)",
+      "Consegue um item superior com 3 modificações (ou de valor equivalente) (Raro)",
+      "Ganha um item mágico menor (acessório ou poção rara)",
+      "Contrata um ajudante ou guarda-costas (Iniciante)",
+      "Aprende Técnica de Combate Única (+1 em um ataque específico)",
+      "Recebe Visita de Mestre (treina 1 perícia até o próximo nível)",
+      "Sobe 1 nível",
+      "Se alia a outro NPC no reino",
+      "Comerciante nato: vai para o reino com melhor rolagem",
+      "Comerciante nato: vai para o reino com melhor rolagem"
+    ]
+  },
+  {
+    "number": "11",
+    "name": "Heróis",
+    "options": [
+      "Fama local: hospedagem gratuita no reino",
+      "Aumenta em +1 um atributo a escolha",
+      "Recebe permanentemente +2 em uma perícia aleatória",
+      "Ganha 1 poder de combate ou destino (perde se sair do reino por muito tempo)",
+      "Sobe 1 nível (apenas se nível < 5)",
+      "Sobe 1 nível",
+      "Ganha um seguidor leal (ND 1/2)",
+      "Aumenta rank na guilda ou adquire um relativo ao nível.",
+      "Se alia a outro NPC no reino",
+      "Celebridade: convocado para a capital ou corte",
+      "Profeta: vai para o reino onde os PJ estão atualmente",
+      "Profeta: vai para o reino onde os PJ estão atualmente"
+    ]
+  },
+  {
+    "number": "12",
+    "name": "Avanço no conhecimento",
+    "options": [
+      "Aprende uma nova magia (se conjurador) ou técnica",
+      "Recebe a habilidade anti-criatura permanente.",
+      "Aumenta 1 atributo mental em +1 (máximo 1 vez por NPC)",
+      "Fica permanentemente sob efeito de uma magia arcana benéfica aleatória. 2PMs(personagem nível 1-5), 4PMs(6-10), 6PMs(11-16) ou 9PMs(17-20)",
+      "Descobre fórmula de item alquímico ou mágico",
+      "Aprende +2 magias ou ganha +5PMs.",
+      "Se alia a outro NPC no reino (grupo de estudos)",
+      "Recebe um poder à escolha.",
+      "Aprende um novo idioma ou proficiência simples",
+      "Pesquisador: vai para um reino afetado por 'Terror Mágico' ou 'Criaturas míticas' ",
+      "Pesquisador: vai para um reino afetado por 'Terror Mágico' ou 'Criaturas míticas' "
+    ]
+  },
+  {
+    "number": "13",
+    "name": "Muita fortuna",
+    "options": [
+      "Ressurreição Verdadeira (sem custos)",
+      "Ressurreição Verdadeira (sem custos)",
+      "Consegue um item com três encantos",
+      "Adquire uma habilidade de classe de distinção",
+      "Sobe 1 nível",
+      "Sobe 1d4-1 níveis",
+      "Acha um item mágico lendário (artefato menor)",
+      "Adquire 100d20 moedas de platina",
+      "Se alia a outros dois NPC no reino (formam uma tríade)",
+      "Sobe 2 níveis",
+      "Auxilio divino: automaticamente se encontra com os PJ "
+    ]
+  }
+]

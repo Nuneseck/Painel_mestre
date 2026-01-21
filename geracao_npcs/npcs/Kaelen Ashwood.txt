@@ -1,0 +1,36 @@
+# Kaelen Ashwood
+
+## Informações Básicas
+- **Raça**:: Humano
+- **Classe**:: Plebeu 4
+- **Gênero**:: Masculino
+- **Idade**:: 31
+
+## Atributos
+| For | Des | Con | Int | Sab | Car |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| 4 | 2 | 3 | 6 | 2 | 4 |
+
+## Aparência
+- **Traço**:: Cabelo cintilante: Tem cabelos que brilham ao sol.
+- **Corpo**:: 167 cm, Mediano, Pele Escura
+- **Cabelo**:: Branco Brilhante, Levemente Ondulado, Rabo de Cavalo
+
+## Personalidade & Propósito
+- **Traço**:: De pavio curto: Reage rapidamente, mas com paixão.
+- **Propósito**:: Nada
+- **Conduta**:: Pacificador: Busca evitar derramamento de sangue, mesmo quando isso complica tudo.
+
+## Tendência
+- **Moral**:: (Bom 6 / Neutro 0 / Mau 4)
+- **Alinhamento**:: (Ordeiro 3 / Neutro 2 / Caótico 5)
+
+## Relações
+- **Orientação**:: Hétero
+- **Relacionamento**:: Solteiro
+- **Comunidade**:: Amado
+- **Familiares**:: 1 filho
+- **Devoção**:: Não Devoto
+
+## Observações
+Lenhador, filho do velho

@@ -1,0 +1,36 @@
+# Alaric Skywalker
+
+## Informações Básicas
+- **Raça**:: Humano
+- **Classe**:: Plebeu 2
+- **Gênero**:: Masculino
+- **Idade**:: 27
+
+## Atributos
+| For | Des | Con | Int | Sab | Car |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| 6 | 1 | 1 | 5 | -1 | 1 |
+
+## Aparência
+- **Traço**:: Físico de nadador: Tem ombros largos, mas pode parecer desequilibrado.
+- **Corpo**:: 168 cm, Muito magro, Pele Escura
+- **Cabelo**:: Auburn (Ruivo Acobreado), Ondulado, Rabo de Cavalo
+
+## Personalidade & Propósito
+- **Traço**:: Submisso: Falta assertividade e é excessivamente passivo.
+- **Propósito**:: Liberdade
+- **Conduta**:: Impulsivo: Age primeiro e pensa depois, guiado pela emoção do momento.
+
+## Tendência
+- **Moral**:: (Bom 7 / Neutro 3 / Mau 0)
+- **Alinhamento**:: (Ordeiro 0 / Neutro 6 / Caótico 4)
+
+## Relações
+- **Orientação**:: Hétero
+- **Relacionamento**:: Solteiro
+- **Comunidade**:: Desconhecido
+- **Familiares**:: Ninguém restou
+- **Devoção**:: Marah (Simpatizante: Apenas gosta do deus, sem adoração ativa)
+
+## Observações
+NPC da missão

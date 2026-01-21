@@ -1,0 +1,36 @@
+# Anders Pemberton
+
+## Informações Básicas
+- **Raça**:: Anão
+- **Classe**:: Plebeu 8
+- **Gênero**:: Masculino
+- **Idade**:: 30
+
+## Atributos
+| For | Des | Con | Int | Sab | Car |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| 5 | 1 | 5 | 3 | 0 | 4 |
+
+## Aparência
+- **Traço**:: Sempre com a pele descamando: Tem uma pele seca e que descama facilmente.
+- **Corpo**:: 120 cm, Obeso, Pele Escura
+- **Cabelo**:: Auburn (Ruivo Acobreado), Liso, Meio Preso, Meio Solto
+
+## Personalidade & Propósito
+- **Traço**:: Grosseiro: Age de forma rude e desagradável.
+- **Propósito**:: Nada
+- **Conduta**:: Intimidador: Usa o medo e ameaças veladas para dobrar a vontade alheia.
+
+## Tendência
+- **Moral**:: (Bom 3 / Neutro 4 / Mau 3)
+- **Alinhamento**:: (Ordeiro 3 / Neutro 7 / Caótico 0)
+
+## Relações
+- **Orientação**:: Hétero
+- **Relacionamento**:: Divorciado
+- **Comunidade**:: Desconhecido
+- **Familiares**:: Pais vivos
+- **Devoção**:: Oceano (Crente Casual: Segue rituais básicos, mas sem grande compromisso)
+
+## Observações
+Nome Dondobar da vila

@@ -1,0 +1,13 @@
+=== Relatório de Viagem ===
+Terreno: Floresta
+Dias: 8
+Período: dia
+
+Dia 1: Obstáculo temporário: Um nevoeiro multicolorido cobre parte da floresta. Exige teste de Vontade CD 15 ou a criatura 'se perde em pensamentos' (1d4 (rolado 4) rodadas de inação). (Enquanto se preparam para um descanso longo)
+Dia 2: Evento duplo: Cicatrizes em árvores com marcas de números ou símbolos — só marcas territoriais de um bando de goblins que já abandonou o local. e também Construto - Exemplo comum (Exemplo de tipo de construto) e Um galho quebra alto na floresta, mas não há nada lá (De tarde)
+Dia 3: Alarme falso: Um amuleto pendurado com cuidado em um galho, tremulando com o vento — desgastado, mas com símbolos religiosos apagados. (De tarde)
+Dia 4: Criaturas: Monstro - Exemplo incomum (Cuidando dos filhotes) (De manhã)
+Dia 5: Sem eventos
+Dia 6: Criaturas: Morto-vivo - Exemplo comum2 (Exemplo de tipo de morto3) (Ao amanhecer)
+Dia 7: Criaturas: Humanoide - 1d6+3 (rolado 7) cultistas e 2 fanaticos do culto (Acampando ou descansando, Todos da mesma raça) (De noite)
+Dia 8: Sem eventos

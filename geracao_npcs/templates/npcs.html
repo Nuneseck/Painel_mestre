@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de NPCs - Tormenta 20</title>
+    
+    <link rel="stylesheet" href="{{ url_for('npcs.static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1><a href="/" class="header-link">Painel do Mestre</a> / NPCs</h1>
+            
+            <button id="gerar-npc">Gerar Novo NPC</button>
+            <button id="copiar-npc" class="secondary-button">Copiar p/ Obsidian</button>
+            <button id="salvar-npc" class="secondary-button">Salvar como .txt</button>
+            
+            <div id="action-status" class="action-status-hidden"></div>
+
+            <div class="observacoes-section">
+                <label for="observacoes">Observações</label>
+                <textarea id="observacoes" rows="5" placeholder="Qualquer nota adicional sobre este NPC..."></textarea>
+            </div>
+        </div>
+    
+        <div id="npc-info" class="hidden main-content">
+            
+            <div class="info-container">
+                <div class="section">
+                    <h2>Informações Básicas</h2>
+                    <p><strong>Nome:</strong> <span id="nome"></span></p>
+                    <p><strong>Raça:</strong> <span id="raca"></span></p>
+                    <p><strong>Classe:</strong> <span id="classe"></span> <span id="nivel"></span></p>
+                    <p><strong>Gênero:</strong> <span id="genero"></span></p>
+                    <p><strong>Idade:</strong> <span id="idade"></span></p>
+                </div>
+    
+                <div class="section">
+                    <h2>Atributos</h2>
+                    <ul id="atributos">
+                        </ul>
+                </div>
+            </div>
+    
+            <div class="info-container">
+                <div class="section">
+                    <h2>Aparência</h2>
+                    <p><strong>Traço:</strong> <span id="traco-aparencia-aleatorio"></span></p>
+                    <p><strong>Corpo:</strong> <span id="altura"></span>, <span id="tipo-corporal"></span>, <span id="cor-pele"></span></p>
+                    <p><strong>Cabelo:</strong> <span id="cabelo"></span></p>
+                </div>
+    
+                <div class="section">
+                    <h2>Personalidade & Propósito</h2>
+                    <p><strong>Traço:</strong> <span id="personalidade-traco"></span></p>
+                    <p><strong>Propósito:</strong> <span id="personalidade-proposito"></span></p>
+                    <p><strong>Conduta:</strong> <span id="personalidade-conduta"></span></p>
+                </div>
+            </div>
+    
+            <div class="info-container">
+                <div class="section">
+                    <h2>Tendência</h2>
+                    <div class="tendencia-container">
+                        <div class="coluna">
+                            <h3>Moral</h3>
+                            <p><strong>Bom:</strong> <span id="tendencia-bom"></span></p>
+                            <p><strong>Neutro:</strong> <span id="tendencia-neutro-moral"></span></p>
+                            <p><strong>Mau:</strong> <span id="tendencia-mau"></span></p>
+                        </div>
+                        <div class="coluna">
+                            <h3>Alinhamento</h3>
+                            <p><strong>Ordeiro:</strong> <span id="tendencia-ordeiros"></span></p>
+                            <p><strong>Neutro:</strong> <span id="tendencia-neutro-alinhamento"></span></p>
+                            <p><strong>Caótico:</strong> <span id="tendencia-caotico"></span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Relações</h2>
+                    <p><strong>Orientação:</strong> <span id="orientacao-sexual"></span></p>
+                    <p><strong>Relacionamento:</strong> <span id="relacionamentos"></span></p>
+                    <p><strong>Comunidade:</strong> <span id="comunidade"></span></p>
+                    <p><strong>Familiares:</strong> <span id="familiares"></span></p>
+                    <p><strong>Devoção:</strong> <span id="devocao-nome"></span> <span id="devocao-nivel"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentNPC = null;
+        const btnGerar = document.getElementById('gerar-npc');
+        const btnCopiar = document.getElementById('copiar-npc');
+        const btnSalvar = document.getElementById('salvar-npc');
+        const txtObservacoes = document.getElementById('observacoes');
+        const lblStatus = document.getElementById('action-status');
+
+        // FUNÇÃO INTELIGENTE: Detecta se é Lista ou Texto e formata corretamente
+        function formatarDado(dado) {
+            if (!dado) return "";
+            
+            // SE FOR LISTA (Ex: ["Abrasivo", "Descrição"])
+            // Retorna: "Abrasivo: Descrição" (com espaço e dois pontos)
+            if (Array.isArray(dado)) {
+                return `${dado[0]}: ${dado[1]}`;
+            }
+            
+            // SE FOR TEXTO (Ex: "Texto com,vírgula colada")
+            // Retorna: "Texto com, vírgula colada"
+            if (typeof dado === 'string') {
+                return dado.replace(/,([^\s])/g, ', $1');
+            }
+            
+            return dado;
+        }
+
+        function preencherNPC(npc) {
+            currentNPC = npc;
+
+            // --- INFORMAÇÕES BÁSICAS ---
+            document.getElementById('nome').textContent = npc.Name;
+            document.getElementById('raca').textContent = npc.Race;
+            document.getElementById('classe').textContent = npc.Class;
+            document.getElementById('nivel').textContent = npc.Level;
+            document.getElementById('genero').textContent = npc.Gender;
+            document.getElementById('idade').textContent = npc.Age;
+
+            // --- ATRIBUTOS ---
+            const atributosList = document.getElementById('atributos');
+            atributosList.innerHTML = '';
+            const atributosOrd = ['Força', 'Destreza', 'Constituição', 'Inteligência', 'Sabedoria', 'Carisma'];
+            atributosOrd.forEach(atributo => {
+                const li = document.createElement('li');
+                li.innerHTML = `<span class="atributo-nome">${atributo}:</span> <span class="atributo-valor">${npc.AbilityScores[atributo]}</span>`;
+                atributosList.appendChild(li);
+            });
+
+            // --- APARÊNCIA ---
+            // Usa a nova função formatarDado para evitar quebras se for lista ou texto
+            document.getElementById('traco-aparencia-aleatorio').textContent = formatarDado(npc.Appearance["Traço Aleatório"][1]);
+            document.getElementById('altura').textContent = npc.Appearance["Altura"];
+            document.getElementById('tipo-corporal').textContent = npc.Appearance["Tipo Corporal"];
+            document.getElementById('cor-pele').textContent = npc.Appearance["Cor da Pele"];
+            
+            const cabelo = npc.Appearance.Cabelo;
+            document.getElementById('cabelo').textContent = 
+                ` ${cabelo.Cor}, ${cabelo.Tipo}, ${cabelo.Estilo}` + 
+                (cabelo["Raça Específica"] ? `, ${cabelo["Raça Específica"]}` : "");
+
+            // --- PERSONALIDADE & PROPÓSITO ---
+            // O Traço vem como [ChaveIngles, [NomePT, DescricaoPT]] ou [ChaveIngles, "StringUnica"]
+            // Acessamos o índice [1] que é o valor (Lista ou String) e passamos para o formatador
+            document.getElementById('personalidade-traco').textContent = formatarDado(npc.PersonalityTrait[1]);
+            
+            document.getElementById('personalidade-proposito').textContent = npc.Proposito;
+            
+            // Conduta (Modo de Agir) geralmente é String, mas o formatador garante que não quebre
+            document.getElementById('personalidade-conduta').textContent = formatarDado(npc.ModoAgir[1]); // Usa [1] pois vem (Nome, Descrição) do Python
+
+            // --- TENDÊNCIA ---
+            document.getElementById('tendencia-bom').textContent = npc.Tendencia.Moral.Bom;
+            document.getElementById('tendencia-neutro-moral').textContent = npc.Tendencia.Moral.Neutro;
+            document.getElementById('tendencia-mau').textContent = npc.Tendencia.Moral.Mau;
+            document.getElementById('tendencia-ordeiros').textContent = npc.Tendencia.Alinhamento.Ordeiro;
+            document.getElementById('tendencia-neutro-alinhamento').textContent = npc.Tendencia.Alinhamento.Neutro;
+            document.getElementById('tendencia-caotico').textContent = npc.Tendencia.Alinhamento.Caótico;
+
+            // --- RELAÇÕES ---
+            document.getElementById('orientacao-sexual').textContent = npc.Orientação_Sexual;
+            document.getElementById('relacionamentos').textContent = npc.Relacionamentos;
+            document.getElementById('comunidade').textContent = npc.Comunidade;
+            document.getElementById('devocao-nome').textContent = npc.Devocao.Devocao;
+            document.getElementById('devocao-nivel').textContent = npc.Devocao.Nível ? `(${npc.Devocao.Nível})` : "";
+            document.getElementById('familiares').textContent = npc.Familiares;
+
+            document.getElementById('npc-info').classList.remove('hidden');
+        }
+
+        async function fetchNPC() {
+            btnGerar.disabled = true;
+            btnGerar.textContent = "Gerando...";
+            lblStatus.classList.remove('action-status-success', 'action-status-error');
+            lblStatus.classList.add('action-status-hidden');
+
+            try {
+                const response = await fetch("{{ url_for('npcs.gerar_npc_route') }}");
+                if (!response.ok) throw new Error(`Erro de rede: ${response.statusText}`);
+                const npc = await response.json();
+                preencherNPC(npc);
+            } catch (error) {
+                console.error('Erro ao gerar NPC:', error);
+                // Mostra o erro na tela de forma amigável
+                document.getElementById('npc-info').innerHTML = `<div class="section"><p class="error">Falha ao processar dados (Javascript). Verifique o console (F12).</p></div>`;
+                document.getElementById('npc-info').classList.remove('hidden');
+            } finally {
+                btnGerar.disabled = false;
+                btnGerar.textContent = "Gerar Novo NPC";
+            }
+        }
+        
+        function formatarNPCparaObsidian(npc, observacoes) {
+            const lines = [];
+            lines.push(`# ${npc.Name}`);
+            
+            lines.push("\n## Informações Básicas");
+            lines.push(`- **Raça**:: ${npc.Race}`);
+            lines.push(`- **Classe**:: ${npc.Class} ${npc.Level}`);
+            lines.push(`- **Gênero**:: ${npc.Gender}`);
+            lines.push(`- **Idade**:: ${npc.Age}`);
+
+            lines.push("\n## Atributos");
+            lines.push("| For | Des | Con | Int | Sab | Car |");
+            lines.push("|:---:|:---:|:---:|:---:|:---:|:---:|");
+            lines.push(`| ${npc.AbilityScores.Força} | ${npc.AbilityScores.Destreza} | ${npc.AbilityScores.Constituição} | ${npc.AbilityScores.Inteligência} | ${npc.AbilityScores.Sabedoria} | ${npc.AbilityScores.Carisma} |`);
+
+            lines.push("\n## Aparência");
+            // Usa formatarDado para corrigir a vírgula
+            lines.push(`- **Traço**:: ${formatarDado(npc.Appearance["Traço Aleatório"][1])}`);
+            lines.push(`- **Corpo**:: ${npc.Appearance.Altura}, ${npc.Appearance["Tipo Corporal"]}, ${npc.Appearance["Cor da Pele"]}`);
+            let cabeloStr = `${npc.Appearance.Cabelo.Cor}, ${npc.Appearance.Cabelo.Tipo}, ${npc.Appearance.Cabelo.Estilo}`;
+            if (npc.Appearance.Cabelo["Raça Específica"]) { cabeloStr += `, ${npc.Appearance.Cabelo["Raça Específica"]}`; }
+            lines.push(`- **Cabelo**:: ${cabeloStr}`);
+
+            // === SEÇÃO ATUALIZADA ===
+            lines.push("\n## Personalidade & Propósito");
+            // Traço: usa formatarDado no valor (índice 1)
+            lines.push(`- **Traço**:: ${formatarDado(npc.PersonalityTrait[1])}`);
+            // Propósito: string simples
+            lines.push(`- **Propósito**:: ${npc.Proposito}`);
+            // Conduta: Nome (índice 0) + Descrição formatada (índice 1)
+            lines.push(`- **Conduta**:: ${npc.ModoAgir[0]}: ${formatarDado(npc.ModoAgir[1])}`);
+            // ========================
+
+            lines.push("\n## Tendência");
+            lines.push(`- **Moral**:: (Bom ${npc.Tendencia.Moral.Bom} / Neutro ${npc.Tendencia.Moral.Neutro} / Mau ${npc.Tendencia.Moral.Mau})`);
+            lines.push(`- **Alinhamento**:: (Ordeiro ${npc.Tendencia.Alinhamento.Ordeiro} / Neutro ${npc.Tendencia.Alinhamento.Neutro} / Caótico ${npc.Tendencia.Alinhamento.Caótico})`);
+            
+            lines.push("\n## Relações");
+            lines.push(`- **Orientação**:: ${npc.Orientação_Sexual}`);
+            lines.push(`- **Relacionamento**:: ${npc.Relacionamentos}`);
+            lines.push(`- **Comunidade**:: ${npc.Comunidade}`);
+            lines.push(`- **Familiares**:: ${npc.Familiares}`);
+            lines.push(`- **Devoção**:: ${npc.Devocao.Devocao}` + (npc.Devocao.Nível ? ` (${npc.Devocao.Nível})` : ""));
+
+            if (observacoes && observacoes.trim() !== "") {
+                lines.push("\n## Observações");
+                lines.push(observacoes);
+            }
+            
+            return lines.join('\n');
+        }
+        
+        btnGerar.addEventListener('click', fetchNPC);
+
+        btnCopiar.addEventListener('click', function() {
+            if (!currentNPC) { alert("Gere um NPC primeiro!"); return; }
+            const observacoes = txtObservacoes.value;
+            const markdown = formatarNPCparaObsidian(currentNPC, observacoes);
+            navigator.clipboard.writeText(markdown).then(() => {
+                lblStatus.textContent = "Copiado para a área de transferência!";
+                lblStatus.className = 'action-status-success';
+                lblStatus.classList.remove('action-status-hidden');
+            }, (err) => {
+                lblStatus.textContent = "Falha ao copiar.";
+                lblStatus.className = 'action-status-error';
+                lblStatus.classList.remove('action-status-hidden');
+            });
+        });
+
+        btnSalvar.addEventListener('click', async function() {
+            if (!currentNPC) { alert("Gere um NPC primeiro!"); return; }
+            btnSalvar.disabled = true;
+            btnSalvar.textContent = "Salvando...";
+            const observacoes = txtObservacoes.value;
+            try {
+                const response = await fetch("{{ url_for('npcs.salvar_npc_route') }}", {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ npc_data: currentNPC, observacoes: observacoes })
+                });
+                if (!response.ok) {
+                    const err = await response.json();
+                    throw new Error(err.error || "Erro desconhecido do servidor");
+                }
+                const result = await response.json();
+                lblStatus.textContent = `Salvo em: ${result.filepath}`;
+                lblStatus.className = 'action-status-success';
+                lblStatus.classList.remove('action-status-hidden');
+            } catch (error) {
+                lblStatus.textContent = `Erro ao salvar: ${error.message}`;
+                lblStatus.className = 'action-status-error';
+                lblStatus.classList.remove('action-status-hidden');
+            } finally {
+                btnSalvar.disabled = false;
+                btnSalvar.textContent = "Salvar como .txt";
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', fetchNPC);
+    </script>
+</body>
+</html>

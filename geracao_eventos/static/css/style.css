@@ -1,0 +1,245 @@
+/* * ============================================
+ * CSS UNIFICADO - MÓDULO DE EVENTOS
+ * ============================================
+ * Este arquivo deve ser carregado DEPOIS
+ * do 'style.css' principal (base do 'encontros').
+ * Ele herda :root, body, main, h1-h3, 
+ * fieldset, label, input, select, 
+ * e button[type="submit"] do principal.
+ */
+
+
+/* --- Estilos do Formulário (eventos.html) --- */
+
+.radio-group {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-light-primary);
+    cursor: pointer;
+    /* Sobrescreve 'label' para não ser 'block' */
+    display: inline-flex; 
+    margin-bottom: 0;
+}
+.radio-option input[type="radio"] {
+    accent-color: var(--primary);
+    width: auto; /* Garante que o radio não ocupe 100% */
+}
+
+
+/* --- Estilos dos Resultados (eventos_results.html) --- */
+
+.results-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: var(--bg-dark-deep); /* Fundo mais escuro, igual ao #result-container */
+    border-radius: 8px;
+    border: 1px solid var(--secondary);
+}
+.results-header h1 {
+    margin-top: 0;
+    border-bottom: none; /* Remove a borda do H1 aqui */
+}
+.results-header p {
+    font-size: 1.1em;
+    color: var(--text-light-secondary);
+    margin: 0;
+}
+
+.download-section {
+    background-color: var(--bg-dark-deep);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px dashed var(--primary);
+}
+
+.day-card {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-left: 4px solid var(--primary);
+    background-color: var(--bg-dark-deep); /* Fundo mais escuro */
+    border-radius: 0 4px 4px 0;
+}
+
+.day-card h3 {
+    color: var(--accent);
+    margin-top: 0;
+}
+
+.encounter {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--bg-dark-surface); /* Cor de superfície, igual ao main */
+    border-radius: 4px;
+    color: var(--text-light-primary);
+    border: 1px solid var(--border-dark);
+}
+
+.no-encounter {
+    color: var(--text-light-secondary);
+    font-style: italic;
+}
+
+.time-badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    background-color: var(--accent);
+    color: var(--text-light-primary);
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+/* * --- PADRONIZAÇÃO DE BOTÕES ---
+ * Fazem links e botões secundários 
+ * parecerem o 'button[type="submit"]' principal.
+ */
+
+.download-btn,
+.button-back,
+.button-secondary {
+    /* Pega o estilo do 'button[type="submit"]' do encontros.css */
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--text-light-primary);
+    background-color: var(--primary);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-decoration: none; /* Para os links <a> */
+    text-align: center; /* Para os links <a> */
+    box-sizing: border-box; /* Garante padding correto */
+}
+
+.download-btn:hover,
+.button-back:hover,
+.button-secondary:hover {
+    background-color: var(--secondary);
+}
+
+/* Variação para botões secundários */
+.button-back,
+.button-secondary {
+    background-color: var(--secondary);
+}
+.button-back:hover,
+.button-secondary:hover {
+    background-color: var(--primary);
+}
+
+
+.back-button-container {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+.reroll-form {
+    width: 100%;
+    flex: 1;
+}
+.button-back {
+    flex: 1;
+}
+
+/* --- Seções e Botões de Geração (Características / Equipamentos) --- */
+
+.caracteristicas-section,
+.equipamentos-section {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--primary);
+}
+
+.caracteristicas-controls,
+.equipamentos-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+/* Labels dentro dos controles */
+.caracteristicas-controls label,
+.equipamentos-controls label {
+    display: inline-block; /* Não ser 'block' */
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+.caracteristicas-input,
+.equipamentos-input {
+    /* Herda o estilo de 'input[type="number"]' */
+    width: 60px;
+    padding: 10px;
+}
+
+/* Botões pequenos */
+.btn-caracteristicas,
+.btn-equipamentos {
+    /* Estilo de botão principal, mas menor */
+    padding: 8px 12px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: var(--text-light-primary);
+    background-color: var(--primary);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-caracteristicas:hover,
+.btn-equipamentos:hover {
+    background-color: var(--secondary);
+}
+
+.btn-caracteristicas:disabled,
+.btn-equipamentos:disabled {
+    background-color: #333;
+    color: #777;
+    cursor: not-allowed;
+}
+
+/* --- Container dos resultados da geração --- */
+.caracteristica,
+.equipamento-item {
+    /* Estilo baseado no '#result-container li' do encontros.css */
+    background: var(--bg-dark-deep);
+    border: 1px solid var(--tormenta-dark);
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    color: var(--text-light-primary);
+}
+.caracteristica h4 {
+    margin: 0 0 5px 0;
+    color: var(--tormenta-light);
+}
+.caracteristica p {
+    margin: 0;
+}
+
+.equipamento-item {
+    white-space: pre-wrap; /* Mantém a formatação <pre> */
+    font-family: 'Roboto', sans-serif;
+}
+
+.error {
+    color: var(--danger);
+    font-weight: bold;
+}
