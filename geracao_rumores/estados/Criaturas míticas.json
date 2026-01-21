@@ -1,0 +1,12 @@
+{
+    "veracidade_mod": {
+        "pressagio": 3
+    },
+    "boost": {
+        "quem_2": ["fada sombria", "centauro", "espírito da floresta"]
+    },
+    "templates": [
+        "{quem} encontrou pistas de {quem_2} {onde}",
+        "Dizem que {quem_2} foi visto {como} perto de {onde}"
+    ]
+}

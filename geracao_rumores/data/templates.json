@@ -1,0 +1,10 @@
+[
+    "{quem} {acao} {quem_2} {como} perto de {onde}",
+    "{quem} afirma ter visto {quem_2} carregando {item}",
+    "{grupo} comentam que {quem} {acao} {item}, aparentemente por estar {motivacao}",
+    "{quem} diz que ouviu {quem_2} {como} enquanto segurava {item} {onde}",
+    "{quem} e {quem_2} foram vistos discutindo sobre {item} {onde}",
+    "{grupo} juram ter encontrado {item} {como}, mas nao conseguiram explicar para que servia",
+    "{quem} reclamou que {quem_2} tentou tomar seu {item}",
+    "moradores {onde} dizem que {quem} {acao} {quem_2} por estar {motivacao}"
+]

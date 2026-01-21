@@ -1,0 +1,14 @@
+{
+    "veracidade_mod": {
+        "ameaca_maior": 3
+    },
+    "boost": {
+        "quem_2": ["demonio", "espirito vingativo", "mago enlouquecido"],
+        "item": ["entulho ardente", "runas quebradas"],
+        "acao": ["foi atacado por", "tentou fugir de", "implorou ajuda apos ver"]
+    },
+    "templates": [
+        "{quem} {acao} {quem_2} enquanto segurava {item} {onde}",
+        "gritos ecoaram {onde} quando {quem} viu {quem_2} {como}"
+    ]
+}

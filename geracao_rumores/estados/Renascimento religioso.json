@@ -1,0 +1,14 @@
+{
+    "veracidade_mod": {
+        "pressagio": 3,
+        "exagero": 2
+    },
+    "boost": {
+        "grupo": ["adoradores secretos", "pregadores locais"],
+        "item": ["símbolo sagrado", "relíquia pequena"]
+    },
+    "templates": [
+        "{grupo} anunciam sinais divinos envolvendo {item} {onde}",
+        "{quem} disse que recebeu uma visão enquanto via {quem_2} {como}"
+    ]
+}

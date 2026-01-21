@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Encontros T20</title>
+    <link rel="stylesheet" href="{{ url_for('encontros.static', filename='style.css') }}">
+</head>
+<body>
+
+    <main>
+        <h1><a href="/" class="header-link">Painel do Mestre</a> / Gerador de Encontros</h1>
+        
+        <form id="encounter-form">
+            <fieldset>
+                <legend>Tipos de Criatura</legend>
+                <div class="checkbox-group">
+                    {% for type in available_types %}
+                    <label>
+                        <input type="checkbox" name="allowed_types" value="{{ type }}" checked>
+                        {{ type.replace('_', ' ').capitalize() }}
+                    </label>
+                    {% else %}
+                    <p>Nenhum arquivo JSON encontrado na pasta /data.</p>
+                    {% endfor %}
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Origens (Livros)</legend>
+                <div class="checkbox-group">
+                    {% for origin in available_origins %}
+                    <label>
+                        <input type="checkbox" name="allowed_origins" value="{{ origin }}" checked>
+                        {{ origin }}
+                    </label>
+                    {% else %}
+                    <p>Não foi possível carregar as origens.</p>
+                    {% endfor %}
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Parâmetros do Encontro</legend>
+                <div class="form-group">
+                    <label for="target_nd">ND Alvo do Encontro:</label>
+                    <input type="number" id="target_nd" name="target_nd" value="5" step="0.25" min="0.25" required>
+                </div>
+                <div class="form-group">
+                    <label for="min_creature_nd">ND Mínimo da Criatura:</label>
+                    <input type="number" id="min_creature_nd" name="min_creature_nd" value="0.25" step="0.25" min="0.25" required>
+                </div>
+                <div class="form-group">
+                    <label for="max_creature_nd">ND Máximo da Criatura:</label>
+                    <input type="number" id="max_creature_nd" name="max_creature_nd" value="20" step="0.25" min="0.25" required>
+                </div>
+                <div class="form-group-inline">
+                    <div class="form-group">
+                        <label for="min_creatures">Qtd. Mínima:</label>
+                        <input type="number" id="min_creatures" name="min_creatures" value="1" step="1" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="max_creatures">Qtd. Máxima:</label>
+                        <input type="number" id="max_creatures" name="max_creatures" value="10" step="1" min="1" required>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Composição do Encontro</legend>
+                <div class="form-group">
+                    <select id="composition" name="composition">
+                        <option value="varias solo + lacaios">Várias criaturas (Solo + Lacaios)</option>
+                        <option value="1 solo + lacaios">1 Solo + Lacaios</option>
+                        <option value="somente lacaios">Somente Lacaios</option>
+                    </select>
+                </div>
+            </fieldset>
+            <button type="submit" id="generate-button">Gerar Encontro</button>
+        </form>
+        
+        <hr>
+        
+        <h2>Resultado</h2>
+        <div id="result-container">
+            <p>Configure os filtros e clique em "Gerar Encontro".</p>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('encounter-form').addEventListener('submit', async function(e) {
+            e.preventDefault(); 
+            const form = e.target;
+            const formData = new FormData(form);
+            const button = document.getElementById('generate-button');
+            const resultDiv = document.getElementById('result-container');
+            
+            const data = {
+                target_nd: parseFloat(formData.get('target_nd')),
+                min_creature_nd: parseFloat(formData.get('min_creature_nd')),
+                max_creature_nd: parseFloat(formData.get('max_creature_nd')),
+                min_creatures: parseInt(formData.get('min_creatures')),
+                max_creatures: parseInt(formData.get('max_creatures')),
+                composition: formData.get('composition'),
+                allowed_types: formData.getAll('allowed_types'),
+                allowed_origins: formData.getAll('allowed_origins')
+            };
+
+            button.disabled = true;
+            button.textContent = 'Gerando...';
+            resultDiv.innerHTML = '<p>Calculando...</p>';
+
+            try {
+                // O 'url_for' para a rota da API está correto
+                const response = await fetch("{{ url_for('encontros.gerar_encontro_route') }}", {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                
+                const result = await response.json();
+                if (!response.ok) throw new Error(result.error || 'Erro desconhecido');
+                
+                let html = `<h3>Encontro Gerado (ND ${result.nd_calculado} | ${result.contagem_criaturas} criaturas)</h3>`;
+                
+                // --- INÍCIO DA OTIMIZAÇÃO ---
+                // Agrupa e conta os monstros em uma única passagem (O(n))
+                const monsterGroups = {};
+                result.encontro.forEach(monster => {
+                    if (!monsterGroups[monster.nome]) {
+                        // Se o monstro não foi visto, armazena ele e zera a contagem
+                        monsterGroups[monster.nome] = {
+                            monsterData: monster, // Armazena o objeto completo do monstro
+                            count: 0
+                        };
+                    }
+                    // Incrementa a contagem
+                    monsterGroups[monster.nome].count++;
+                });
+                // --- FIM DA OTIMIZAÇÃO ---
+
+                html += '<ul>';
+                
+                // Agora, percorre a lista de monstros agrupados (O(m), onde m é o nº de monstros únicos)
+                for (const group of Object.values(monsterGroups)) {
+                    const monster = group.monsterData;
+                    const count = group.count;
+                    
+                    html += `<li>
+                        <b>${count > 1 ? `${count}x ` : ''}${monster.nome}</b>
+                        (ND ${monster.nd}, ${monster.tipo}, ${monster.categoria})
+                        <br>
+                        <small><i>Origem: ${monster.origem} | Tesouro: ${monster.tesouro}</i></small>
+                    </li>`;
+                }
+                
+                html += '</ul>';
+                resultDiv.innerHTML = html;
+                
+            } catch (error) {
+                resultDiv.innerHTML = `<p class="error"><b>Erro:</b> ${error.message}</p>`;
+            } finally {
+                button.disabled = false;
+                button.textContent = 'Gerar Encontro';
+            }
+        });
+    </script>
+</body>
+</html>

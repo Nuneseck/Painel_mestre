@@ -1,0 +1,13 @@
+{
+    "veracidade_mod": {
+        "verdadeiro": 2
+    },
+    "boost": {
+        "item": ["artefato antigo", "pergaminho perdido"],
+        "quem_2": ["arqueólogo local", "pesquisador viajante"]
+    },
+    "templates": [
+        "{quem} diz que {quem_2} encontrou {item} {onde}",
+        "Rumores falam de uma nova descoberta {como} {onde}"
+    ]
+}

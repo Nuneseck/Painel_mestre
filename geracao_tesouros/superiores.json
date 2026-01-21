@@ -1,0 +1,45 @@
+{
+  "arma": {
+    "Atroz": 10,
+    "Banhada a ouro": 3,
+    "Certeira": 10,
+    "Cravejada de gemas": 3,
+    "Cruel": 10,
+    "Discreta": 3,
+    "Equilibrada": 5,
+    "Harmonizada": 4,
+    "Injeção alquímica": 5,
+    "Macabra": 2,
+    "Maciça": 10,
+    "Material especial": 10,
+    "Mira telescópica": 5,
+    "Precisa": 10,
+    "Pungente": 10
+  },
+  "armadura": {
+    "Ajustada": 15,
+    "Banhada a ouro": 4,
+    "Cravejada de gemas": 4,
+    "Delicada": 5,
+    "Discreta": 4,
+    "Espinhos": 5,
+    "Macabra": 3,
+    "Material especial": 10,
+    "Polida": 5,
+    "Reforçada": 25,
+    "Selada": 10,
+    "Sob medida": 10
+  },
+  "esoterico": {
+    "Banhada a ouro": 4,
+    "Cravejada de gemas": 4,
+    "Discreto": 4,
+    "Energético": 15,
+    "Harmonizado": 15,
+    "Macabra": 3,
+    "Material especial": 9,
+    "Poderoso": 16,
+    "Potencializador": 15,
+    "Vigilante": 15
+  }
+}

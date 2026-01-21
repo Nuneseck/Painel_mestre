@@ -1,0 +1,101 @@
+
+{
+    "Livro básico": [
+        {"nome": "Rato Gigante", "nd": 0.25, "tipo": "lacaio", "tesouro": "Nenhum"},
+        {"nome": "Lobo", "nd": 0.5, "tipo": "lacaio", "tesouro": "Nenhum"},
+        {"nome": "Gorlogg", "nd": 1, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Lobo-das-Cavernas", "nd": 2, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Cascavel", "nd": 0.25, "tipo": "lacaio", "tesouro": "Nenhum"},
+        {"nome": "Jiboia", "nd": 0.5, "tipo": "lacaio", "tesouro": "Nenhum"},
+        {"nome": "Naja", "nd": 1, "tipo": "lacaio", "tesouro": "1 dose de peçonha concentrada (CD 16 para extrair)."},
+        {"nome": "Sucuri", "nd": 3, "tipo": "solo", "tesouro": "Nenhum"}
+    ],
+
+    "Ameaças de Arton": [
+        {"nome": "Lagarto Perseguidor", "nd": 2, "tipo": "lacaio", "tesouro": "Nenhum"},
+        {"nome": "Hiena", "nd": 1, "tipo": "lacaio", "tesouro": "Nenhum"},
+        {"nome": "Hiena Rainha", "nd": 2, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Hienodonte", "nd": 3, "tipo": "lacaio", "tesouro": "Nenhum"},
+        {"nome": "Chibi-Kabuto", "nd": 0.25, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Ko-Kabuto", "nd": 1, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Horda de Ko-Kabuto", "nd": 3, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Dai-Kabuto", "nd": 4, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Escudeiro", "nd": 0.5, "tipo": "lacaio", "tesouro": "Carapaça óssea (CD 15 para extrair; vale T$ 50 para fabricar um escudo superior)."},
+        {"nome": "Gambá", "nd": 0.5, "tipo": "lacaio", "tesouro": "Nenhum"},
+        {"nome": "Kill’Bone", "nd": 0.5, "tipo": "lacaio", "tesouro": "Nenhum"},
+        {"nome": "Tentacute", "nd": 0.5, "tipo": "lacaio", "tesouro": "Nenhum"},
+        {"nome": "Tropa de Tentacutes", "nd": 2, "tipo": "lacaio", "tesouro": "Nenhum"},
+        {"nome": "Verilêmur", "nd": 0.5, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Malafex", "nd": 0.5, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Asa-Assassina", "nd": 1, "tipo": "lacaio", "tesouro": "Asas afiadas (CD 16 para extrair, vale T$ 100 para fabricar uma arma de corte superior)."},
+        {"nome": "Baleote", "nd": 3, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Capivara", "nd": 1, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Cavalo de Carga", "nd": 0.5, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Cavalo de Montaria", "nd": 0.5, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Cavalo de Guerra", "nd": 1, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Cavalo de Namalkah", "nd": 2, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Cavalo Glacial", "nd": 2, "tipo": "solo", "tesouro": "1 dose de éter elemental (frio) (CD 17 para extrair)."},
+        {"nome": "Dromedário", "nd": 1, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Elefante", "nd": 7, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Gorlogg", "nd": 1, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Gorlogg Alfa", "nd": 5, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Leão", "nd": 2, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Pantera", "nd": 2, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Tigre", "nd": 3, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Rinoceronte", "nd": 4, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Rinoceronte Lanoso", "nd": 6, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Brontotério", "nd": 8, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Trobo", "nd": 1, "tipo": "lacaio", "tesouro": "Nenhum"},
+        {"nome": "Tumarkhân", "nd": 4, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Urso Panda", "nd": 1, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Urso Pardo", "nd": 3, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Urso das Cavernas", "nd": 8, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Burafonte", "nd": 4, "tipo": "solo", "tesouro": "Protuberâncias ósseas (CD 19 para extrair, valem T$ 100 para fabricar armas corpo a corpo superiores)."},
+        {"nome": "Armento de Burafontes", "nd": 8, "tipo": "solo", "tesouro": "2d4 protuberâncias ósseas (CD 23 para extrair, cada protuberância vale T$ 100 para fabricar armas corpo a corpo superiores)."},
+        {"nome": "Deinonico", "nd": 4, "tipo": "solo", "tesouro": "Duas garras terríveis (CD 19 para extrair, cada garra vale T$ 100 para fabricar uma arma de corte superior leve ou de uma mão)."},
+        {"nome": "Bando de Deinonicos", "nd": 8, "tipo": "solo", "tesouro": "Garras terríveis x2d4 (CD 23 para extrair, cada garra vale T$ 100 para fabricar uma arma de corte superior leve ou de uma mão)."},
+        {"nome": "Gali-Gali", "nd": 0.25, "tipo": "lacaio", "tesouro": "Nenhum"},
+        {"nome": "Enxame de Gali-Gali", "nd": 1, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Grande Battham", "nd": 12, "tipo": "solo", "tesouro": "Fígado de lagarto-trovão (CD 27 para extrair)."},
+        {"nome": "Raagoran", "nd": 8, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Tuntram", "nd": 10, "tipo": "solo", "tesouro": "Folho de tuntram (CD 25 para extrair, vale T$ 1.000 para fabricar armaduras e escudos superiores)."},
+        {"nome": "Rei-Tirano", "nd": 14, "tipo": "solo", "tesouro": "Dentes do rei-tirano (CD 29 para extrair, valem T$ 1.500 para fabricar armas superiores)."},
+        {"nome": "Búfalo-de-Guerra", "nd": 2, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Hippossauro", "nd": 3, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Canceronte", "nd": 3, "tipo": "solo", "tesouro": "1d6 postas de canceronte (CD 18 para extrair; cada posta vale T$ 12 para preparar um banquete de canceronte )."},
+        {"nome": "Água-viva", "nd": 1, "tipo": "lacaio", "tesouro": "Filamentos corrosivos (CD 16 para extrair, valem T$ 10 para fabricar ácidos)."},
+        {"nome": "Enxame de Águas-vivas", "nd": 6, "tipo": "solo", "tesouro": "Filamentos corrosivos (CD 21 para extrair, valem T$ 60 para fabricar ácidos)."},
+        {"nome": "Água-viva Gigante", "nd": 8, "tipo": "solo", "tesouro": "Filamentos corrosivos (CD 23 para extrair, valem T$ 120 para fabricar ácidos)."},
+        {"nome": "Peixe-Recife", "nd": 6, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Platan", "nd": 2, "tipo": "lacaio", "tesouro": "Nenhum"},
+        {"nome": "Selako", "nd": 2, "tipo": "solo", "tesouro": "Couro de selako (CD 17 para extrair, vale T$ 30 para fabricar um traje selako ) e dentes de selako (CD 17 para extrair, valem T$ 300 para fabricar uma arma superior)."},
+        {"nome": "Selako-Tigre", "nd": 6, "tipo": "solo", "tesouro": "Couro de selako x2 (CD 21 para extrair, vale T$ 30 para fabricar um traje selako ) e dentes de selako x2 (CD 21 para extrair, valem T$ 300 para fabricar uma arma superior)."},
+        {"nome": "Cardume de Selakos", "nd": 9, "tipo": "solo", "tesouro": "Equivalente a 1d4+1 selakos."},
+        {"nome": "Mega-Selako", "nd": 12, "tipo": "solo", "tesouro": "Couro de selako x1d4 (CD 27 para extrair, cada couro vale T$ 30 para fabricar um traje selako ) e dentes de selako x1d4+1 (CD 27 para extrair, cada dente vale T$ 300 para fabricar uma arma superior)."},
+        {"nome": "Pliorex", "nd": 5, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Pliorex Abissal", "nd": 10, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Perdigueiro Troll", "nd": 1, "tipo": "lacaio", "tesouro": "Nenhum"},
+        {"nome": "Carcaju", "nd": 1, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Mamute", "nd": 8, "tipo": "solo", "tesouro": "Marfim (CD 23 para extrair, vale T$ 1.000 para fabricar armas superiores) e pele de mamute (CD 23 para extrair, vale T$ 1.000 para fabricar armaduras leves superiores)."},
+        {"nome": "Urso das Neves", "nd": 5, "tipo": "solo", "tesouro": "1d3 peças de cristais de sol (CD 20 para extrair)."}
+    ],
+
+    "Guerra Artoniana": [
+        {"nome": "Cão Teravith", "nd": 2, "tipo": "solo", "tesouro": "Nenhum"}
+    ],
+
+    "Guia de NPCs": [
+        {"nome": "Molosso deheoni", "nd": 2, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Falcão", "nd": 0.25, "tipo": "lacaio", "tesouro": "Nenhum"},
+        {"nome": "Gorlogg de estimação", "nd": 2, "tipo": "solo", "tesouro": "Nenhum"}
+    ],
+
+    "Fim dos tempos": [
+        {"nome": "Cardume Carnívoro", "nd": 3, "tipo": "lacaio", "tesouro": "Nenhum"}
+    ],
+
+    "Libertação de Valkaria": [
+        {"nome": "Urso Protetor", "nd": 1, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Serval", "nd": 1, "tipo": "solo", "tesouro": "Nenhum"}
+    ]
+}

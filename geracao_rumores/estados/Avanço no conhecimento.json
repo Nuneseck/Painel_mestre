@@ -1,0 +1,13 @@
+{
+    "veracidade_mod": {
+        "verdadeiro": 2
+    },
+    "boost": {
+        "quem_2": ["inventor", "alquimista", "cronista"],
+        "item": ["manuscrito novo", "fórmula estranha"]
+    },
+    "templates": [
+        "{quem_2} revelou {item} descoberto {onde}",
+        "{quem} ouviu sobre um experimento {como} {onde}"
+    ]
+}

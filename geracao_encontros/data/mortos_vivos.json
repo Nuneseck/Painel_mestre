@@ -1,0 +1,11 @@
+{    
+    "Livro básico": [
+    {"nome": "Zumbi", "nd": 0.25, "tipo": "lacaio", "tesouro": "Nenhum"},
+    {"nome": "Turba Zumbi", "nd": 2, "tipo": "lacaio", "tesouro": "Nenhum"},
+    {"nome": "Esqueleto", "nd": 2, "tipo": "lacaio", "tesouro": "Nenhum"},
+    {"nome": "Esqueleto de elite", "nd": 4, "tipo": "lacaio", "tesouro": "Nenhum"},
+    {"nome": "Falange", "nd": 8, "tipo": "lacaio", "tesouro": "Nenhum"},
+    {"nome": "Aparição", "nd": 5, "tipo": "solo", "tesouro": "Nenhum"},
+    {"nome": "Vampiro", "nd": 12, "tipo": "solo", "tesouro": "Dobro"}
+    ]
+}

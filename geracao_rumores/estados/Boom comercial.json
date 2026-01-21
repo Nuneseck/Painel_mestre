@@ -1,0 +1,12 @@
+{
+    "veracidade_mod": {
+        "parcial": 2
+    },
+    "boost": {
+        "item": ["mercadoria rara", "caixa pesada", "amostra valiosa"]
+    },
+    "templates": [
+        "{grupo} dizem que {quem} está lucrando com {item}",
+        "{quem} afirma ter comprado {item} por um ótimo preço {onde}"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "veracidade_mod": {
+        "exagero": 3
+    },
+    "boost": {
+        "item": ["moeda valiosa", "joia rara", "bens preciosos"]
+    },
+    "templates": [
+        "{quem} diz ter encontrado {item} {onde}",
+        "Rumores dizem que {grupo} esbarraram em {item} {como}"
+    ]
+}

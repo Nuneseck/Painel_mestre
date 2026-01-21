@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rolador de Tesouros T20</title>
+    <!-- CORREÇÃO: Aponta para o 'static' do blueprint 'tesouros' -->
+    <link rel="stylesheet" href="{{ url_for('tesouros.static', filename='style.css') }}">
+    <style>
+        .result-section {
+            margin-bottom: 15px; padding: 10px;
+            border: 1px solid var(--blood-red); border-radius: 5px;
+            background-color: var(--bg-dark-deep);
+        }
+        .result-section h4 {
+            margin-top: 0; margin-bottom: 10px; color: var(--primary);
+            border-bottom: 1px solid var(--secondary); padding-bottom: 5px;
+        }
+        .result-section ul {
+            list-style-type: none; padding-left: 0;
+            margin-top: 0; margin-bottom: 5px;
+        }
+        .result-section li { font-size: 1.1em; padding: 4px 0; }
+        .result-section li strong { color: var(--text-light-secondary); font-size: 0.9em; }
+        .resolved-items {
+            padding: 10px; margin-top: 8px;
+            background-color: var(--bg-dark-surface);
+            border-radius: 4px; border: 1px solid #333;
+        }
+        .resolved-items p { margin: 5px 0; font-size: 1em; color: var(--text-light-primary); }
+        .resolved-items p strong { color: var(--tormenta-light); font-size: 1.1em; }
+        #result-container .highlight { color: var(--tormenta-light); font-weight: bold; font-size: 1.1em; }
+    </style>
+</head>
+<body>
+    <main>
+        <h1><a href="/" class="header-link">Painel do Mestre</a> / Rolador de Tesouros</h1>
+        <form id="treasure-form">
+            <!-- (Formulário sem alterações) -->
+            <fieldset>
+                <legend>Parâmetros do Tesouro</legend>
+                <div class="form-group">
+                    <label for="nd-select">Nível de Desafio (ND) do Tesouro:</label>
+                    <select id="nd-select" name="nd">
+                        {% for nd in nd_levels %}
+                            <option value="{{ nd }}">{{ nd.upper() }}</option>
+                        {% else %}
+                            <option value="">Erro: nds.json não carregado</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Tipo de Tesouro</legend>
+                <div class="form-group">
+                    <label for="treasure-type">Quantidade de Tesouro:</label>
+                    <select id="treasure-type" name="treasure_type">
+                        <option value="padrao" selected>Padrão</option>
+                        <option value="metade">Metade (Dinheiro/Riquezas pela metade)</option>
+                        <option value="dobro">Dobro (Rola Dinheiro e Itens 2x)</option>
+                    </select>
+                </div>
+            </fieldset>
+            <button type="submit" id="roll-button">Rolar Tesouro</button>
+        </form>
+        <hr>
+        <h2>Resultado</h2>
+        <div id="result-container">
+            <p>Selecione o ND e clique em "Rolar Tesouro".</p>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('treasure-form').addEventListener('submit', async function(e) {
+            e.preventDefault(); 
+            const form = e.target;
+            const button = document.getElementById('roll-button');
+            const resultDiv = document.getElementById('result-container');
+            const selectedND = document.getElementById('nd-select').value;
+            const treasureType = document.getElementById('treasure-type').value;
+            
+            if (!selectedND) {
+                resultDiv.innerHTML = '<p class="error">Nenhum ND selecionado.</p>';
+                return;
+            }
+
+            button.disabled = true;
+            button.textContent = 'Rolando...';
+            resultDiv.innerHTML = '<p>Rolando dados...</p>';
+
+            try {
+                // CORREÇÃO: Aponta para a rota do blueprint 'tesouros.rolar_tesouro'
+                const response = await fetch("{{ url_for('tesouros.rolar_tesouro') }}", {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ 
+                        nd: selectedND,
+                        treasure_type: treasureType
+                    })
+                });
+                
+                const result = await response.json();
+                if (!response.ok) throw new Error(result.error || 'Erro desconhecido');
+                
+                let html = `<h3>Resultado para ${result.nd.toUpperCase()}</h3>`;
+                const formatResults = (resultsArray) => {
+                    if (!Array.isArray(resultsArray) || resultsArray.length === 0) return "";
+                    return resultsArray
+                        .map(item => `<p>${item.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')}</p>`)
+                        .join('');
+                };
+
+                const d100DinheiroStr = result.d100_dinheiro_rolls.join(' / ');
+                html += `<div class="result-section">`;
+                html += `<h4>Dinheiro (d100: ${d100DinheiroStr})</h4>`;
+                html += '<ul>';
+                html += `<li><strong>Tabela:</strong> ${result.dinheiro_tabela_roll}</li>`;
+                html += `<li><strong>Resultado:</strong></li>`;
+                html += `</ul>`;
+                html += `<div class="resolved-items">${formatResults(result.dinheiro_results)}</div>`;
+                html += `</div>`;
+                
+                const d100ItemStr = result.d100_item_rolls.join(' / ');
+                html += `<div class="result-section">`;
+                html += `<h4>Itens (d100: ${d100ItemStr})</h4>`;
+                html += '<ul>';
+                html += `<li><strong>Tabela:</strong> ${result.item_tabela_roll}</li>`;
+                html += `<li><strong>Resultado:</strong></li>`;
+                html += `</ul>`;
+                html += `<div class="resolved-items">${formatResults(result.item_results)}</div>`;
+                html += `</div>`;
+                
+                resultDiv.innerHTML = html;
+                
+            } catch (error) {
+                resultDiv.innerHTML = `<p class="error"><b>Erro:</b> ${error.message}</p>`;
+            } finally {
+                button.disabled = false;
+                button.textContent = 'Rolar Tesouro';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+/* Variáveis da paleta de cores - Dark Mode Tormenta */
+body {
+    --primary: #8B0000;      /* Vermelho escuro */
+    --secondary: #5D0000;    /* Vermelho mais escuro */
+    --dark: #1A0A0A;          /* Preto com tom vermelho */
+    --accent: #D22B2B;        /* Vermelho vivo */
+    --danger: #FF3333;        /* Vermelho de erro */
+    --tormenta-light: #FF4D4D; /* Destaques */
+    --blood-red: #6A0000;      /* Vermelho sangue principal */
+    
+    --bg-dark-deep: #121212;     /* Fundo do corpo */
+    --bg-dark-surface: #1e1e1e;  /* Fundo do 'main' */
+    --text-light-primary: #e0e0e0;/* Texto principal */
+    --text-light-secondary: #aaaaaa;/* Texto secundário */
+}
+
+
+/* Reset básico */
+* { box-sizing: border-box; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-dark-deep);
+    color: var(--text-light-primary);
+    margin: 0;
+    padding: 20px;
+}
+
+main {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: var(--bg-dark-surface);
+    color: var(--text-light-primary);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    border: 2px solid var(--dark-crimson);
+}
+
+h1, h2, h3 {
+    color: var(--accent);
+    border-bottom: 2px solid var(--blood-red);
+    padding-bottom: 5px;
+}
+
+h1 {
+    color: var(--tormenta-light);
+    text-align: center;
+}
+
+header h1 a,
+.header-link {
+    text-decoration: none;
+    color: var(--accent);
+    transition: color 0.2s;
+}
+header h1 a:hover,
+.header-link:hover {
+    color: var(--text-light-primary, #e0e0e0);
+}
+
+fieldset {
+    border: 1px solid var(--blood-red);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 0 10px;
+    color: var(--primary);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--secondary);
+    background-color: var(--bg-dark-deep); /* Inputs escuros */
+    color: var(--text-light-primary);      /* Texto claro nos inputs */
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--text-light-primary);
+    background-color: var(--primary);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--secondary);
+}
+
+button[type="submit"]:disabled {
+    background-color: #333;
+    color: #777;
+    cursor: not-allowed;
+}
+
+#result-container {
+    background: var(--bg-dark-deep);
+    border: 1px solid var(--secondary);
+    border-radius: 5px;
+    padding: 20px;
+    min-height: 100px;
+}
+
+#result-container ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#result-container li {
+    font-size: 1.1em;
+    padding: 8px 0;
+}
+
+#result-container li strong {
+    color: var(--text-light-secondary);
+}
+
+/* Destaque para o resultado final */
+#result-container .highlight {
+    color: var(--tormenta-light);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.error {
+    color: var(--danger);
+    font-weight: bold;
+}
+
+.result-section {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid var(--blood-red);
+    border-radius: 5px;
+    background-color: var(--bg-dark-surface); /* Garante consistência de fundo */
+}
+.result-section h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--primary);
+    border-bottom: 1px solid var(--secondary);
+    padding-bottom: 5px;
+}
+
+#result-container ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 0;
+}
+
+#result-container li {
+    font-size: 1.1em;
+    padding: 4px 0;
+}
+
+#result-container li strong {
+    color: var(--text-light-secondary);
+    font-size: 0.9em;
+}
+
+/* Destaque para o resultado final */
+#result-container .highlight {
+    color: var(--tormenta-light);
+    font-weight: bold;
+    font-size: 1.1em;
+}

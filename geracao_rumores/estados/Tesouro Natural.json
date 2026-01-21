@@ -1,0 +1,12 @@
+{
+    "veracidade_mod": {
+        "parcial": 2
+    },
+    "boost": {
+        "item": ["mineral raro", "erva brilhante", "cristal natural"]
+    },
+    "templates": [
+        "Dizem que {grupo} encontraram {item} raro {onde}",
+        "{quem} afirma que a região {onde} mudou após o surgimento de {item}"
+    ]
+}

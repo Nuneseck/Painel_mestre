@@ -1,0 +1,6 @@
+{
+    "Livro básico": [
+    {"nome": "Guerreiro de Chifres", "nd": 3, "tipo": "solo", "tesouro": "Padrão"},
+    {"nome": "Cão do Inferno", "nd": 3, "tipo": "solo", "tesouro": "1d4 doses de essência abissal (CD 18 para extrair)."}
+    ]
+}

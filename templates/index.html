@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Mestre</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="dashboard-main">
+        <h1>Painel do Mestre</h1>
+        <p>Selecione uma ferramenta para começar.</p>
+        
+        <div class="tool-grid">
+            {% for tool in tools %}
+            <a href="{{ tool.url }}" class="tool-card">
+                <h2>{{ tool.name }}</h2>
+                <p>{{ tool.desc }}</p>
+            </a>
+            {% endfor %}
+        </div>
+    </main>
+</body>
+</html>

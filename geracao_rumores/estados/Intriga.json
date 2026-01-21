@@ -1,0 +1,13 @@
+{
+    "veracidade_mod": {
+        "mentira": 3,
+        "exagero": 2
+    },
+    "boost": {
+        "quem": ["ladrão", "bardo", "mercador suspeito"]
+    },
+    "templates": [
+        "{quem} foi visto {como} falando com {quem_2} sobre {item}",
+        "{grupo} suspeitam que {quem} esteja escondendo algo {onde}"
+    ]
+}

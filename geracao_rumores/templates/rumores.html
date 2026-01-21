@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Rumores — Painel do Mestre</title>
+
+    <!-- Carrega o CSS completo -->
+    <link rel="stylesheet" href="{{ url_for('rumores.static', filename='style.css') }}">
+</head>
+<body>
+
+    <main>
+        <header>
+            <h1><a href="/" class="header-link">Painel do Mestre</a> / Gerador de Rumores</h1>        
+        </header>
+
+        <form id="rumorForm">
+            <fieldset>
+                <legend>Parâmetros do Boato</legend>
+                
+                <div class="form-group">
+                    <label for="selectEstado">Situação Atual do Reino:</label>
+                    <select id="selectEstado" name="estado">
+                        {% if estados %}
+                            <!-- CORREÇÃO AQUI: Loop simples para LISTA (sem .items) -->
+                            {% for estado in estados %}
+                                <option value="{{ estado }}">{{ estado }}</option>
+                            {% endfor %}
+                        {% else %}
+                            <option value="Nada muito fora do habitual">Nada muito fora do habitual</option>
+                        {% endif %}
+                    </select>
+                </div>
+            </fieldset>
+
+            <button id="btnGerar" type="button">Ouvir nas Tavernas</button>
+        </form>
+
+        <!-- Área de Resultados -->
+        <div id="resultadoArea" class="rumor-result-container hidden">
+            <div class="results-header">
+                <h3>O que dizem as más línguas...</h3>
+            </div>
+
+            <div id="rumorCard"></div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById("btnGerar").addEventListener("click", async () => {
+            const select = document.getElementById("selectEstado");
+            const btn = document.getElementById("btnGerar");
+            const resultArea = document.getElementById("resultadoArea");
+            const cardArea = document.getElementById("rumorCard");
+
+            // UI Loading
+            btn.textContent = "CONSULTANDO ORÁCULO...";
+            btn.disabled = true;
+            resultArea.classList.add('hidden');
+
+            try {
+                const url = "{{ url_for('rumores.gerar_rumor_api') }}";
+
+                const resp = await fetch(url, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ estado: select.value })
+                });
+
+                const data = await resp.json();
+                
+                if (resp.ok) {
+                    // Lógica de Cores das Badges (Atualizada com todas as opções)
+                    let badgeClass = 'v-lie';
+                    const ver = (data.veracidade || "").toLowerCase();
+
+                    if (ver.includes('ameaça') || ver.includes('perigo')) badgeClass = 'v-danger';
+                    else if (ver.includes('press')) badgeClass = 'v-omen';
+                    else if (ver.includes('mal') || ver.includes('interpret')) badgeClass = 'v-misinterpreted';
+                    else if (ver.includes('desatual')) badgeClass = 'v-outdated';
+                    else if (ver.includes('exager') || ver.includes('parcial')) badgeClass = 'v-exaggerated';
+                    else if (ver.includes('verdade')) badgeClass = 'v-true';
+                    else if (ver.includes('mentira') || ver.includes('engano')) badgeClass = 'v-lie';
+
+                    const verDisplay = data.veracidade || "Desconhecido";
+
+                    cardArea.innerHTML = `
+                        <div class="day-card">
+                            <h4>Situação: ${data.estado}</h4>
+                            
+                            <div class="encounter">
+                                "${data.rumor}"
+                            </div>
+
+                            <div style="text-align: right; margin-top: 10px;">
+                                <span class="veracity-badge ${badgeClass}">
+                                    ${verDisplay}
+                                </span>
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    cardArea.innerHTML = `<div class="error-msg">${data.erro || 'Erro desconhecido.'}</div>`;
+                }
+
+                resultArea.classList.remove('hidden');
+
+            } catch (err) {
+                console.error(err);
+                cardArea.innerHTML = `<div class="error-msg">Erro de conexão: ${err.message}</div>`;
+                resultArea.classList.remove('hidden');
+            } finally {
+                btn.textContent = "OUVIR NAS TAVERNAS";
+                btn.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>

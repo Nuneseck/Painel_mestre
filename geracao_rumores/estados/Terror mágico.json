@@ -1,0 +1,13 @@
+{
+    "veracidade_mod": {
+        "ameaça_maior": 2
+    },
+    "boost": {
+        "quem_2": ["feiticeiro instável", "entidade arcana", "ilusão viva"],
+        "item": ["orbe brilhante", "símbolo arcano distorcido"]
+    },
+    "templates": [
+        "{quem} diz ter visto {quem_2} manipulando {item} {onde}",
+        "Uma explosão mágica assustou {grupo} {onde}"
+    ]
+}

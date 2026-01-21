@@ -1,0 +1,254 @@
+/* ============================================================
+   PADRÃO GLOBAL (copiado do gerador de encontros)
+   ============================================================ */
+
+:root {
+    --primary: #8B0000;
+    --secondary: #5D0000;
+    --dark: #1A0A0A;
+    --accent: #D22B2B;
+    --danger: #FF3333;
+    --tormenta-dark: #3D0000;
+    --tormenta-light: #FF4D4D;
+    --blood-red: #6A0000;
+    --dark-crimson: #450000;
+
+    --bg-dark-deep: #121212;
+    --bg-dark-surface: #1e1e1e;
+    --text-light-primary: #e0e0e0;
+    --text-light-secondary: #aaaaaa;
+    --border-dark: #333333;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-dark-deep);
+    color: var(--text-light-primary);
+    margin: 0;
+    padding: 20px;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--bg-dark-surface);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    border: 2px solid var(--dark-crimson);
+}
+
+h1, h2, h3 {
+    color: var(--accent);
+    border-bottom: 2px solid var(--blood-red);
+    padding-bottom: 5px;
+}
+
+h1 {
+    color: var(--tormenta-light);
+}
+
+header h1 a,
+.header-link {
+    text-decoration: none;
+    color: var(--accent);
+    transition: color 0.2s;
+}
+
+header h1 a:hover {
+    color: var(--text-light-primary);
+}
+
+fieldset {
+    border: 1px solid var(--blood-red);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 0 10px;
+    color: var(--primary);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--secondary);
+    background-color: var(--bg-dark-deep);
+    color: var(--text-light-primary);
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+/* ============================================================
+   BOTÃO — igual ao style do gerador de encontros
+   ============================================================ */
+#btnGerar {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--text-light-primary);
+    background-color: var(--primary);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-transform: uppercase;
+}
+
+#btnGerar:hover {
+    background-color: var(--secondary);
+}
+
+#btnGerar:disabled {
+    background-color: #333;
+    color: #777;
+    cursor: not-allowed;
+}
+
+/* ============================================================
+   ÁREA DE RESULTADO — igual ao #result-container
+   ============================================================ */
+.rumor-result-container {
+    margin-top: 20px;
+    background: var(--bg-dark-deep);
+    color: var(--text-light-primary);
+    border: 1px solid var(--secondary);
+    border-radius: 5px;
+    padding: 20px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.results-header h3 {
+    margin-top: 0;
+    color: var(--tormenta-light);
+    border-bottom: 1px dashed var(--secondary);
+    padding-bottom: 10px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+/* ============================================================
+   CARD DO RUMOR — igual ao li dos encontros + tema Tormenta
+   ============================================================ */
+.day-card {
+    background: var(--bg-dark-surface);
+    border: 1px solid var(--tormenta-dark);
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.day-card h4 {
+    color: var(--accent);
+    margin: 0 0 10px 0;
+    font-size: 1.1em;
+}
+
+.encounter {
+    font-style: italic;
+    color: var(--text-light-primary);
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.veracity-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff !important;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+/* 1. Verdadeiro (Verde) */
+.v-true {
+    background-color: #2e7d32;
+    border: 1px solid #1b5e20;
+}
+
+/* 2. Exagero (Laranja Vivo) */
+.v-exaggerated {
+    background-color: #e65100;
+    border: 1px solid #bf360c;
+}
+
+/* 3. Ameaça Maior (Vermelho Sangue - Destaque) */
+.v-danger {
+    background-color: var(--danger);
+    border: 1px solid var(--blood-red);
+    box-shadow: 0 0 10px rgba(255, 51, 51, 0.5); /* Brilho de perigo */
+}
+
+/* 4. Mentira (Cinza Escuro) */
+.v-lie {
+    background-color: #424242;
+    border: 1px solid #616161;
+}
+
+/* 5. Mal Interpretado (Roxo - Confusão/Místico) */
+.v-misinterpreted {
+    background-color: #7b1fa2;
+    border: 1px solid #4a148c;
+}
+
+/* 6. Parcial (Amarelo Escuro/Dourado - Verdade incompleta) */
+.v-partial {
+    background-color: #f57f17;
+    border: 1px solid #ff6f00;
+    color: #fff !important;
+}
+
+/* 7. Desatualizado (Azul Acinzentado - Notícia velha/fria) */
+.v-outdated {
+    background-color: #455a64;
+    border: 1px solid #263238;
+}
+
+/* 8. Presságio (Indigo Profundo/Azul Mágico) */
+.v-omen {
+    background-color: #311b92;
+    border: 1px solid #000063;
+    box-shadow: 0 0 8px rgba(100, 100, 255, 0.3);
+}
+
+.error-msg {
+    color: var(--danger);
+    text-align: center;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}

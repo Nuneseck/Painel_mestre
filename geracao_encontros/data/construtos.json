@@ -1,0 +1,8 @@
+{    
+    "Livro básico": [
+        {"nome": "Gárgula", "nd": 2, "tipo": "solo", "tesouro": "Padrão"},
+        {"nome": "Golem de Ferro", "nd": 10, "tipo": "solo", "tesouro": "Nenhum"},
+        {"nome": "Colosso Supremo", "nd": 14, "tipo": "solo", "tesouro": "1d6 engrenagens (CD 29 para extrair; cada engrenagem conta como T$ 1.000 em matéria-prima para fabricar engenhocas)."},
+        {"nome": "Engenho de Guerra Goblin", "nd": 6, "tipo": "solo", "tesouro": "Padrão"}
+    ]
+}

@@ -1,0 +1,8 @@
+{
+    "veracidade_mod": {},
+    "boost": {},
+    "templates": [
+        "{quem} reclamou de {item} perdido {onde}",
+        "{grupo} comentam sobre problemas triviais {onde}"
+    ]
+}

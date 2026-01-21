@@ -1,0 +1,14 @@
+{
+    "veracidade_mod": {
+        "verdadeiro": 3,
+        "exagero": 2
+    },
+    "boost": {
+        "quem": ["aventureiro famoso", "herói local"],
+        "item": ["arma ancestral", "relíquia heroica"]
+    },
+    "templates": [
+        "{quem} derrotou {quem_2} usando {item}",
+        "Histórias contam que {grupo} testemunharam {quem} {ação} {quem_2}"
+    ]
+}

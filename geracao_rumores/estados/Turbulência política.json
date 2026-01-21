@@ -1,0 +1,13 @@
+{
+    "veracidade_mod": {
+        "mentira": 2,
+        "exagero": 2
+    },
+    "boost": {
+        "quem": ["nobre menor", "soldado da guarda", "espião local"]
+    },
+    "templates": [
+        "{quem} afirma que {quem_2} {ação} documentos secretos {onde}",
+        "Boatos dizem que {grupo} planejam derrubar alguém {onde}"
+    ]
+}

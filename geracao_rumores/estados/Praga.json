@@ -1,0 +1,13 @@
+{
+    "veracidade_mod": {
+        "desatualizado": 2,
+        "mal_interpretado": 2
+    },
+    "boost": {
+        "item": ["ervas podres", "sangue escuro", "amuletos quebrados"]
+    },
+    "templates": [
+        "{quem} afirma que {quem_2} espalhou {item} {onde}",
+        "{grupo} dizem que animais doentes estão aparecendo {onde}"
+    ]
+}
